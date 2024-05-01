@@ -95,7 +95,7 @@ body {
 .main-text {
   font-family: var(--second-family);
   font-weight: 300;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 125%;
   text-align: center;
   color: var(--color-dark);
