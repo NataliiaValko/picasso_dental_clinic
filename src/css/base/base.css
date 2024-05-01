@@ -185,4 +185,20 @@ body {
     padding-left: 70px;
     padding-right: 70px;
   }
+  .button-secondary-light:hover,
+  .button-secondary-light:focus {
+    background-color: #fff;
+    color: #3f5b6f;
+  }
+  .button-secondary-dark:hover,
+  .button-secondary-dark:focus {
+    background-color: #3f5b6f;
+    color: #fff;
+  }
+  .button-main-dark:hover,
+  .button-main-dark:focus,
+  .button-main-light:hover,
+  .button-main-light:focus {
+    background-color: #202f39;
+  }
 }
