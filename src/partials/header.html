@@ -1,27 +1,45 @@
-<!-- <p>header</p>
-<load ="partials/mobile-menu.html" /> -->
 <header class="header">
-  <div class="container header__container">
-    <nav class="header__nav">
-      <a href="../index.html" lang="uk" class="header__logo">
-        <svg class="header__icon" width="142" height="112">
+  <div class="container header-container">
+    <nav class="header-nav">
+      <a href="../index.html" lang="uk" class="header-logo">
+        <svg class="header-icon" width="74" height="58">
           <use href="../images/sprite.svg#icon-logo"></use>
         </svg>
       </a>
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a href="../index.html" class="nav__link">Головна</a>
+
+      <button
+        class="header-burger-menu js-open-menu"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg width="24" height="24">
+          <use href="../images/sprite.svg#icon-burger-menu"></use>
+        </svg>
+      </button>
+
+      <load ="partials/mobile-menu.html" />
+
+      <ul class="header-nav-list">
+        <li class="header-nav-item">
+          <a href="../index.html" class="header-nav-link">Головна</a>
         </li>
-        <li class="nav__item">
-          <a href="../about.html" class="nav__link">Про нас</a>
+        <li class="header-nav-item">
+          <a href="../about.html" class="header-nav-link">Про нас</a>
         </li>
-        <li class="nav__item"><a href="#" class="nav__link">Послуги</a></li>
-        <li class="nav__item">
-          <a href="../portfolio.html" class="nav__link">Портфоліо</a>
+        <li class="header-nav-item">
+          <a href="#" class="header-nav-link">Послуги</a>
         </li>
-        <li class="nav__item"><a href="#" class="nav__link">Контакти</a></li>
+        <li class="header-nav-item">
+          <a href="../portfolio.html" class="header-nav-link">Портфоліо</a>
+        </li>
+        <li class="header-nav-item">
+          <a href="#" class="header-nav-link">Контакти</a>
+        </li>
       </ul>
-      <button type="button" class="nav__btn">Записатись</button>
+      <button type="button" class="button-main-dark header-nav-btn">
+        Записатись
+      </button>
     </nav>
   </div>
 </header>

@@ -152,7 +152,7 @@ body {
   text-transform: uppercase;
 }
 
-@media screen and (min-width: var(--mobile)) {
+@media screen and (min-width: 375px) {
   .container {
     width: var(--mobile);
   }
@@ -164,7 +164,7 @@ body {
   }
 }
 
-@media screen and (min-width: var(--tablet)) {
+@media screen and (min-width: 834px) {
   .container {
     width: var(--tablet);
     padding-left: 40px;
@@ -181,7 +181,7 @@ body {
   }
 }
 
-@media screen and (min-width: var(--tablet)) {
+@media screen and (min-width: 1440px) {
   .container {
     width: var(--desktop);
     padding-left: 70px;
