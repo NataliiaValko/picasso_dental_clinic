@@ -147,7 +147,7 @@
 
 @media screen and (min-width: 375px) {
   .container {
-    width: 335px;
+    width: var(--mobile);
   }
   .main-title {
     font-size: 32px;
@@ -159,7 +159,7 @@
 
 @media screen and (min-width: 834px) {
   .container {
-    width: 754px;
+    width: var(--tablet);
     padding-left: 40px;
     padding-right: 40px;
   }
@@ -168,8 +168,6 @@
     text-align: start;
   }
   .main-text {
-    width: 436px;
-
     font-size: 18px;
     line-height: 122%;
     text-align: start;
@@ -178,11 +176,8 @@
 
 @media screen and (min-width: 1440px) {
   .container {
-    width: 1300px;
+    width: var(--desktop);
     padding-left: 70px;
     padding-right: 70px;
-  }
-  .main-text {
-    width: 565px;
   }
 }
