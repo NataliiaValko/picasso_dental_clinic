@@ -57,6 +57,11 @@
   --desktop: 1440px;
 }
 
+body {
+  font-family: var(--main-family);
+  color: var(--color-dark);
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
