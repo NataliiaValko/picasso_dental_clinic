@@ -80,37 +80,41 @@
 }
 
 .main-title {
+  font-family: var(--main-family);
   font-weight: 400;
   font-size: 32px;
-  color: #3f5b6f;
+  color: var(--color-accent);
   text-align: center;
 }
 
 .main-text {
+  font-family: var(--second-family);
   font-weight: 300;
   font-size: 15px;
   line-height: 125%;
   text-align: center;
-  color: #3e403d;
+  color: var(--color-dark);
 }
 
 .button-main-dark {
   padding: 16px 32px;
   border: none;
 
-  background-color: #3f5b6f;
+  background-color: var(--color-accent);
   color: #fff;
+  font-family: var(--main-family);
   font-weight: 400;
   font-size: 20px;
   line-height: 120%;
   text-transform: uppercase;
 }
 .button-secondary-dark {
-  border: 1px solid #3f5b6f;
+  border: 1px solid var(--color-accent);
   padding: 16px 32px;
 
   background-color: transparent;
-  color: #3f5b6f;
+  color: var(--color-accent);
+  font-family: var(--main-family);
   font-weight: 400;
   font-size: 20px;
   line-height: 120%;
@@ -121,18 +125,20 @@
   border: none;
 
   background-color: #fff;
-  color: #3f5b6f;
+  color: var(--color-accent);
+  font-family: var(--main-family);
   font-weight: 400;
   font-size: 20px;
   line-height: 120%;
   text-transform: uppercase;
 }
 .button-secondary-light {
-  border: 1px solid #fff;
+  border: 1px solid var(--color-white);
   padding: 16px 32px;
 
   background-color: transparent;
-  color: #fff;
+  color: var(--color-white);
+  font-family: var(--main-family);
   font-weight: 400;
   font-size: 20px;
   line-height: 120%;
