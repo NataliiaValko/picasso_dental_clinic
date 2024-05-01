@@ -59,6 +59,11 @@
   --desktop: 1440px;
 }
 
+body {
+  font-family: var(--main-family);
+  color: var(--color-dark);
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -74,11 +79,112 @@
 }
 
 .container {
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 70px;
-  padding-right: 70px;
-  @media (min-width: 1440px) {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.main-title {
+  font-family: var(--main-family);
+  font-weight: 400;
+  font-size: 32px;
+  color: var(--color-accent);
+  text-align: center;
+}
+
+.main-text {
+  font-family: var(--second-family);
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 125%;
+  text-align: center;
+  color: var(--color-dark);
+}
+
+.button-main-dark {
+  padding: 16px 32px;
+  border: none;
+
+  background-color: var(--color-accent);
+  color: #fff;
+  font-family: var(--main-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+.button-secondary-dark {
+  border: 1px solid var(--color-accent);
+  padding: 16px 32px;
+
+  background-color: transparent;
+  color: var(--color-accent);
+  font-family: var(--main-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+.button-main-light {
+  padding: 16px 32px;
+  border: none;
+
+  background-color: #fff;
+  color: var(--color-accent);
+  font-family: var(--main-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+.button-secondary-light {
+  border: 1px solid var(--color-white);
+  padding: 16px 32px;
+
+  background-color: transparent;
+  color: var(--color-white);
+  font-family: var(--main-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: var(--mobile)) {
+  .container {
+    width: var(--mobile);
+  }
+  .main-title {
+    font-size: 32px;
+  }
+  .main-text {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: var(--tablet)) {
+  .container {
+    width: var(--tablet);
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .main-title {
+    font-size: 48px;
+    text-align: start;
+  }
+  .main-text {
+    font-size: 18px;
+    line-height: 122%;
+    text-align: start;
+  }
+}
+
+@media screen and (min-width: var(--tablet)) {
+  .container {
     width: var(--desktop);
+    padding-left: 70px;
+    padding-right: 70px;
   }
 }
