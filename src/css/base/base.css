@@ -1,0 +1,72 @@
+@font-face {
+  font-family: 'AGOpusRoman';
+  src: url('../fonts/AGOpusRoman.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/Gilroy-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/Gilroy-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/Gilroy-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'InterLight';
+  src: url('../fonts/Gilroy-Bold.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'InterRegular';
+  src: url('../fonts/Gilroy-Bold.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --main-family: 'AGOpus', sans-serif;
+  --second-family: 'Gilroy', sans-serif;
+  --third-family: 'Inter', sans-serif;
+
+  --color-accent: #3f5b6f;
+  --color-dark: #3e403d;
+  --color-grey: #7c7e83;
+  --color-white: #fff;
+
+  --time-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  --mobile: 375px;
+  --tablet: 834px;
+  --desktop: 1440px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
