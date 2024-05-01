@@ -70,3 +70,113 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.main-title {
+  font-weight: 400;
+  font-size: 32px;
+  color: #3f5b6f;
+  text-align: center;
+}
+
+.main-text {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 125%;
+  text-align: center;
+  color: #3e403d;
+}
+
+.button-main-dark {
+  padding: 16px 32px;
+  border: none;
+
+  background-color: #3f5b6f;
+  color: #fff;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+.button-secondary-dark {
+  border: 1px solid #3f5b6f;
+  padding: 16px 32px;
+
+  background-color: transparent;
+  color: #3f5b6f;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+.button-main-light {
+  padding: 16px 32px;
+  border: none;
+
+  background-color: #fff;
+  color: #3f5b6f;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+.button-secondary-light {
+  border: 1px solid #fff;
+  padding: 16px 32px;
+
+  background-color: transparent;
+  color: #fff;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 375px) {
+  .container {
+    width: 335px;
+  }
+  .main-title {
+    font-size: 32px;
+  }
+  .main-text {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 834px) {
+  .container {
+    width: 754px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .main-title {
+    font-size: 48px;
+    text-align: start;
+  }
+  .main-text {
+    width: 436px;
+
+    font-size: 18px;
+    line-height: 122%;
+    text-align: start;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 1300px;
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+  .main-text {
+    width: 565px;
+  }
+}
