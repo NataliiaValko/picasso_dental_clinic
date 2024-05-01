@@ -67,17 +67,13 @@
 }
 
 .contacts-title {
-  align-self: center;
-  width: 222px;
-
   color: var(--color-white);
+}
 
-  @media (min-width: 834px) {
-    width: 100%;
-
-    text-align: left;
-    align-self: flex-start;
-  }
+.address {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .contacts-text {
@@ -88,6 +84,10 @@
     line-height: 122%;
     text-align: start;
   }
+}
+
+.phone-number-link {
+  color: var(--color-white);
 }
 
 .contacts-btn-list {
