@@ -1,1 +1,38 @@
-/*  */
+.header__container {
+  backdrop-filter: blur(40px);
+  background: var(--header-bg-color);
+  border-bottom: 1px solid var(--header-border-color);
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  margin-right: 165px;
+}
+
+.nav__list {
+  display: flex;
+}
+
+.nav__item {
+  &:not(:last-child) {
+    margin-right: 67px;
+  }
+}
+
+.nav__link {
+  display: block;
+  padding-top: 58px;
+  padding-bottom: 59px;
+
+  font-family: var(--main-family);
+  font-size: 18px;
+  color: #3f5b6f;
+}
+
+.nav__btn {
+  margin-left: 165px;
+}
