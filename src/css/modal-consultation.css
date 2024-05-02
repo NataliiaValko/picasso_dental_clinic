@@ -242,7 +242,10 @@
   width: 100%;
   height: 140px;
 
-  border: 1px dashed #3f5b6f;
+  border: 1px dashed;
+  border-color: var(--color-accent);
+  fill: var(--color-accent);
+  color: var(--color-accent);
 
   display: flex;
   align-items: center;
@@ -278,13 +281,15 @@
     > svg {
       margin-bottom: 8px;
 
+      fill: inherit;
+
       @media screen and (min-width: 834px) {
         margin-bottom: 0;
         margin-right: 8px;
       }
     }
 
-    > .form_file_first_prg {
+    > .form_file_prg {
       font-family: var(--second-family);
       font-weight: 400;
       font-size: 16px;
@@ -292,7 +297,7 @@
 
       width: 213px;
 
-      color: var(--color-accent);
+      color: inherit;
 
       @media screen and (min-width: 834px) {
         width: 320px;
@@ -339,6 +344,9 @@
   width: 100%;
   margin-bottom: 32px;
 
+  color: var(--color-accent);
+  stroke: var(--color-accent);
+
   @media screen and (min-width: 834px) {
     width: 430px;
   }
@@ -354,7 +362,12 @@
       opacity: 0;
     }
 
+    .checkbox_icon-none {
+      stroke: inherit;
+    }
+
     .checkbox_icon-done {
+      stroke: inherit;
       display: none;
     }
     .form_checkbox:checked ~ .checkbox_icon-none {
@@ -365,18 +378,16 @@
     }
   }
 
-  > p {
+  > .form_checkbox_title {
     font-family: var(--second-family);
     font-style: normal;
     font-weight: 300;
     font-size: 12px;
     line-height: 18px;
 
-    color: var(--color-accent);
-
     > a {
       position: relative;
-      color: var(--color-accent);
+      color: inherit;
     }
 
     > a::after {
@@ -386,7 +397,8 @@
       left: 0;
       height: 1px;
       width: 100%;
-      border-bottom: 1px solid var(--color-accent);
+      border-bottom: 1px solid;
+      border-bottom-color: inherit;
     }
   }
 }

@@ -2,7 +2,7 @@
 
 // openButton.addEventListener('click', openAppointmentModal);
 
-// Функция для открытия модального окна по ID кнопки
+// Функция для открытия модального окна
 export function openAppointmentModal() {
   const appointmentModal = document.getElementById('appointment-modal');
   if (!appointmentModal) {
@@ -10,6 +10,7 @@ export function openAppointmentModal() {
     return;
   }
   appointmentModal.style.display = 'block';
+  document.body.style.overflow = 'hidden';
 }
 
 // Закрытие модального окна
@@ -20,6 +21,7 @@ function closeModal() {
     return;
   }
   appointmentModal.style.display = 'none';
+  document.body.style.overflow = 'auto';
 }
 
 // Обработчик клика на кнопку закрытия модального окна
@@ -43,4 +45,22 @@ document.addEventListener('keydown', function (event) {
   if (event.key === 'Escape') {
     closeModal();
   }
+});
+
+const appointmentForm = document.getElementById('appointment-form');
+
+appointmentForm.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const formData = {
+    name: e.target[0].value,
+    phone: e.target[1].value,
+    email: e.target[2].value,
+    comment: e.target[3].value,
+  };
+
+  console.log(formData);
+
+  e.target.reset();
+  closeModal();
 });

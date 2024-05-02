@@ -24,21 +24,22 @@
         type="text"
         placeholder="ПІБ*"
         pattern="[а-яА-Яa-zA-Z\s]{1,50}"
+        title="Введіть коректне значення (максимум 50 символів)"
         required
-        title="Введите корректное значение (максимум 50 символов)"
       />
       <input
         type="tel"
         placeholder="Номер телефону*"
-        pattern="[\+ \(\)\-\d]{9,12}"
+        pattern="\+?[0-9\s\-\(\)]+"
+        title="Введіть коректний номер телефону"
         required
-        title="Введите корректный номер телефона"
       />
       <input
         type="email"
-        placeholder="Email"
+        placeholder="Email*"
         pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
-        title="Введите корректный email"
+        title="Введіть коректний email"
+        required
       />
       <input type="text" placeholder="Опис скарг*" maxlength="150" required />
       <input type="text" placeholder="Коментар" maxlength="150" />
@@ -48,24 +49,34 @@
         <p>Завантажити результати КТ, рентгену чи інші дослідження</p>
       </div>
 
-      <label class="form_file_label">
+      <label class="form_file_label" id="consultation-form-file-label">
         <div class="form_file_icon_box">
           <svg width="24" height="24">
             <use href="../img/icons/modal-sprite.svg#icon-file"></use>
           </svg>
-          <p class="form_file_first_prg">
+          <p class="form_file_prg">
             <span>Оберіть файл</span> чи перетягніть в цю область
           </p>
         </div>
 
-        <input type="file" class="form_file_input" />
+        <input
+          type="file"
+          class="form_file_input"
+          id="consultation-form-file"
+        />
       </label>
 
-      <p class="form_file_clue">.PDF, .ZIP формати дозволені</p>
+      <p class="form_file_clue" id="consultation-form-file-clue">
+        .PDF, .ZIP формати дозволені
+      </p>
 
-      <label class="form_checkbox_label">
+      <label class="form_checkbox_label" id="checkbox-label">
         <div class="form_checkbox_label__input_box">
-          <input type="checkbox" required class="form_checkbox" />
+          <input
+            type="checkbox"
+            class="form_checkbox"
+            id="consultation-form-checkbox"
+          />
           <svg class="checkbox_icon-none" width="24" height="24">
             <use href="../img/icons/modal-sprite.svg#icon-StateNone"></use>
           </svg>
@@ -74,7 +85,7 @@
           </svg>
         </div>
 
-        <p>
+        <p class="form_checkbox_title">
           Я погоджуюсь з
           <a href="http://" target="_blank" rel="noopener noreferrer"
             >Політикою Конфіденційності</a
