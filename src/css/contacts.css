@@ -60,8 +60,17 @@
 
   margin-bottom: 24px;
 
+  @media (min-width: 375px) {
+    max-width: 375px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   @media (min-width: 834px) {
+    margin-left: 0;
+    margin-right: 0;
     align-items: flex-start;
+
     margin-bottom: 56px;
   }
 }
@@ -76,6 +85,10 @@
   gap: 24px;
 }
 
+.address span {
+  display: block;
+}
+
 .contacts-text {
   color: var(--color-white);
 
@@ -83,6 +96,16 @@
     font-size: 18px;
     line-height: 122%;
     text-align: start;
+  }
+}
+
+.phone-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 834px) {
+    align-items: flex-start;
   }
 }
 
