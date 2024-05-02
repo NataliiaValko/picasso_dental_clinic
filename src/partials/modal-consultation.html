@@ -1,1 +1,89 @@
-<p>consultation-modal</p>
+<div class="modal-consultation__backdrop" id="consultation-modal">
+  <div class="modal-consultation__modal">
+    <button
+      type="button"
+      class="modal-consultation__close-button"
+      id="consultation-modal-close"
+    >
+      <svg width="40" height="40">
+        <use href="../img/icons/modal-sprite.svg#modal_close"></use>
+      </svg>
+    </button>
+
+    <h2 class="modal-consultation__modal__title">Онлайн консультація</h2>
+
+    <p class="modal-consultation__modal__subtitle">
+      Ви можете задати будь-яке питання, описати скарги та надіслати нам
+      резултати досліджень.
+      <br />
+      Наші спеціалісти <span>зв’яжуться з вами</span> в найкоротші терміни
+    </p>
+
+    <form class="modal-consultation__modal__form" id="consultation-form">
+      <input
+        type="text"
+        placeholder="ПІБ*"
+        pattern="[а-яА-Яa-zA-Z\s]{1,50}"
+        required
+        title="Введите корректное значение (максимум 50 символов)"
+      />
+      <input
+        type="tel"
+        placeholder="Номер телефону*"
+        pattern="[\+ \(\)\-\d]{9,12}"
+        required
+        title="Введите корректный номер телефона"
+      />
+      <input
+        type="email"
+        placeholder="Email"
+        pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
+        title="Введите корректный email"
+      />
+      <input type="text" placeholder="Опис скарг*" maxlength="150" required />
+      <input type="text" placeholder="Коментар" maxlength="150" />
+
+      <div class="modal-consultation__modal__form__title_box">
+        <h3>Завантажити файли</h3>
+        <p>Завантажити результати КТ, рентгену чи інші дослідження</p>
+      </div>
+
+      <label class="form_file_label">
+        <div class="form_file_icon_box">
+          <svg width="24" height="24">
+            <use href="../img/icons/modal-sprite.svg#icon-file"></use>
+          </svg>
+          <p class="form_file_first_prg">
+            <span>Оберіть файл</span> чи перетягніть в цю область
+          </p>
+        </div>
+
+        <input type="file" class="form_file_input" />
+      </label>
+
+      <p class="form_file_clue">.PDF, .ZIP формати дозволені</p>
+
+      <label class="form_checkbox_label">
+        <div class="form_checkbox_label__input_box">
+          <input type="checkbox" required class="form_checkbox" />
+          <svg class="checkbox_icon-none" width="24" height="24">
+            <use href="../img/icons/modal-sprite.svg#icon-StateNone"></use>
+          </svg>
+          <svg class="checkbox_icon-done" width="24" height="24">
+            <use href="../img/icons/modal-sprite.svg#icon-StateDone"></use>
+          </svg>
+        </div>
+
+        <p>
+          Я погоджуюсь з
+          <a href="http://" target="_blank" rel="noopener noreferrer"
+            >Політикою Конфіденційності</a
+          >
+          Picasso Dental Clinic та надаю дозвіл на обробку персональних даних
+        </p>
+      </label>
+
+      <button type="submit">Записатись</button>
+    </form>
+  </div>
+</div>

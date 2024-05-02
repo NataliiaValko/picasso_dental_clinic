@@ -1,1 +1,56 @@
-<p>appointment-modal</p>
+<div class="modal-appointment__backdrop" id="appointment-modal">
+  <div class="modal-appointment__modal">
+    <button
+      type="button"
+      class="modal-appointment__close-button"
+      id="appointment-modal-close"
+    >
+      <svg
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+        width="40"
+        height="40"
+      >
+        <use href="../img/icons/modal-sprite.svg#modal_close"></use>
+      </svg>
+    </button>
+
+    <h2 class="modal-appointment__modal__title">Запис на прийом</h2>
+
+    <p class="modal-appointment__modal__subtitle">
+      Ви можете задати будь-яке питання або записатись до одного з лікарів
+      клініки
+    </p>
+
+    <form class="modal-appointment__modal__form" id="appointment-form">
+      <input
+        type="text"
+        placeholder="ПІБ*"
+        pattern="[а-яА-Яa-zA-Z\s]{1,50}"
+        required
+        title="Введите корректное значение (максимум 50 символов)"
+      />
+      <input
+        type="tel"
+        placeholder="Номер телефону*"
+        pattern="[\+ \(\)\-\d]{9,12}"
+        required
+        title="Введите корректный номер телефона"
+      />
+      <input
+        type="email"
+        placeholder="Email"
+        pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
+        title="Введите корректный email"
+      />
+      <input
+        type="text"
+        placeholder="Коментар"
+        maxlength="150"
+        title="Превышено максимальное количество символов (150)"
+      />
+      <button type="submit">Отправить</button>
+    </form>
+  </div>
+</div>

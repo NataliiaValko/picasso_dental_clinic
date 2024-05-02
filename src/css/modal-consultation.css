@@ -1,1 +1,392 @@
 /*  */
+/*  */
+
+.modal-consultation__backdrop {
+  display: none;
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(217, 217, 217, 0.5);
+
+  overflow-y: scroll;
+
+  padding-bottom: 20px;
+
+  @media screen and (min-width: 834px) {
+    padding-bottom: 50px;
+  }
+}
+
+.modal-consultation__close-button {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: transparent;
+  border: none;
+
+  @media screen and (min-width: 834px) {
+    top: 40px;
+    right: 40px;
+  }
+}
+
+.modal-consultation__modal {
+  position: relative;
+  z-index: 1;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+
+  padding: 64px 0 24px;
+  margin-bottom: 20px;
+
+  background: var(--color-white);
+
+  @media screen and (min-width: 375px) {
+    width: var(--mobile);
+  }
+
+  @media screen and (min-width: 834px) {
+    top: 50px;
+    width: 650px;
+    padding: 80px 48px 40px;
+
+    margin-bottom: 50px;
+  }
+}
+
+.modal-consultation__modal__title {
+  font-family: var(--main-family);
+
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 40px;
+
+  width: 290px;
+
+  text-align: center;
+
+  color: var(--color-accent);
+
+  margin-bottom: 16px;
+
+  @media screen and (min-width: 375px) {
+    font-size: 40px;
+    line-height: 47px;
+  }
+
+  @media screen and (min-width: 834px) {
+    width: 100%;
+    font-size: 48px;
+    line-height: 56px;
+  }
+}
+
+.modal-consultation__modal__subtitle {
+  font-family: var(--second-family);
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+
+  width: 290px;
+
+  color: var(--color-accent);
+
+  text-align: center;
+
+  margin-bottom: 32px;
+
+  @media screen and (min-width: 375px) {
+    width: 315px;
+
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media screen and (min-width: 834px) {
+    width: 500px;
+
+    font-size: 18px;
+    line-height: 22px;
+
+    margin-bottom: 40px;
+  }
+
+  > span {
+    font-weight: 600;
+  }
+}
+
+.modal-consultation__modal__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 290px;
+
+  @media screen and (min-width: 375px) {
+    width: 313px;
+  }
+
+  @media screen and (min-width: 834px) {
+    width: 554px;
+  }
+
+  > input {
+    width: 100%;
+    padding: 0 0 16px 0;
+
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--color-grey);
+
+    font-family: var(--second-family);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+
+    color: var(--color-grey);
+
+    margin-bottom: 24px;
+  }
+
+  > input:focus {
+    border-bottom: 1px solid var(--color-accent);
+  }
+
+  input:focus::placeholder {
+    color: var(--color-accent);
+  }
+
+  > input:invalid:not(:placeholder-shown) {
+    border-color: red;
+  }
+
+  > :nth-child(4) {
+    margin-bottom: 32px;
+
+    @media screen and (min-width: 834px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  > button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 32px;
+    gap: 20px;
+
+    width: 195px;
+    height: 56px;
+
+    border: none;
+    background: var(--color-accent);
+
+    font-family: var(--main-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+
+    color: var(--color-white);
+  }
+}
+
+.modal-consultation__modal__form__title_box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+
+  gap: 8px;
+
+  margin-bottom: 24px;
+
+  > h3 {
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+
+    color: var(--color-accent);
+  }
+
+  > p {
+    font-family: var(--second-family);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+
+    color: var(--color-accent);
+  }
+}
+
+.form_file_label {
+  width: 100%;
+  height: 140px;
+
+  border: 1px dashed #3f5b6f;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  margin-bottom: 16px;
+
+  position: relative;
+
+  .form_file_icon_box {
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    padding-top: 32px;
+    background-color: var(--color-white);
+
+    @media screen and (min-width: 834px) {
+      flex-direction: row;
+      padding-top: 0;
+      justify-content: center;
+    }
+
+    > svg {
+      margin-bottom: 8px;
+
+      @media screen and (min-width: 834px) {
+        margin-bottom: 0;
+        margin-right: 8px;
+      }
+    }
+
+    > .form_file_first_prg {
+      font-family: var(--second-family);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+
+      width: 213px;
+
+      color: var(--color-accent);
+
+      @media screen and (min-width: 834px) {
+        width: 320px;
+      }
+
+      > span {
+        display: block;
+        text-align: center;
+        font-weight: 600;
+
+        @media screen and (min-width: 834px) {
+          display: inline;
+        }
+      }
+    }
+  }
+}
+
+.form_file_input {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.form_file_clue {
+  font-family: var(--second-family);
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+
+  text-align: center;
+
+  color: var(--color-accent);
+
+  margin-bottom: 32px;
+}
+
+.form_checkbox_label {
+  display: flex;
+  gap: 8px;
+
+  cursor: pointer;
+
+  width: 100%;
+  margin-bottom: 32px;
+
+  @media screen and (min-width: 834px) {
+    width: 430px;
+  }
+
+  > .form_checkbox_label__input_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > .form_checkbox {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+    }
+
+    .checkbox_icon-done {
+      display: none;
+    }
+    .form_checkbox:checked ~ .checkbox_icon-none {
+      display: none;
+    }
+    .form_checkbox:checked ~ .checkbox_icon-done {
+      display: block;
+    }
+  }
+
+  > p {
+    font-family: var(--second-family);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 18px;
+
+    color: var(--color-accent);
+
+    > a {
+      position: relative;
+      color: var(--color-accent);
+    }
+
+    > a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      border-bottom: 1px solid var(--color-accent);
+    }
+  }
+}
