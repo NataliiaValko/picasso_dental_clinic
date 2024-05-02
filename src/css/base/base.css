@@ -1,6 +1,9 @@
 @font-face {
   font-family: AGOpus;
-  src: url('../../fonts/AGOpusRoman.otf') format('opentype');
+  src: url('../../fonts/Agopus/agopus.woff2') format('woff2'),
+    url('../../fonts/Agopus/agopus.woff') format('woff'),
+    url('../../fonts/Agopus/agopus.ttf') format('truetype'),
+    url('../../fonts/Agopus/agopus.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -14,28 +17,36 @@
 
 @font-face {
   font-family: Gilroy;
-  src: url('../../fonts/Gilroy-Medium.ttf') format('truetype');
+  src: url('../../fonts/Gilroy/gilroy-light.woff') format('woff'),
+    url('../../fonts/Gilroy/gilroy-light.ttf') format('truetype');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: Gilroy;
-  src: url('../../fonts/Gilroy-Bold.ttf') format('truetype');
+  src: url('../../fonts/Gilroy/gilroy-medium.woff') format('woff'),
+    url('../../fonts/Gilroy/gilroy-medium.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: Inter;
-  src: url('../../fonts/Inter-Light.ttf') format('truetype');
+  src: url('../../fonts/Inter/inter-light.woff2') format('woff2'),
+    url('../../fonts/Inter/inter-light.woff') format('woff'),
+    url('../../fonts/Inter/inter-light.ttf') format('truetype'),
+    url('../../fonts/Inter/inter-light.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: Inter;
-  src: url('../../fonts/Inter-Regular.ttf') format('truetype');
+  src: url('../../fonts/Inter/inter-regular.woff2') format('woff2'),
+    url('../../fonts/Inter/inter-regular.woff') format('woff'),
+    url('../../fonts/Inter/inter-regular.ttf') format('truetype'),
+    url('../../fonts/Inter/inter-regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
 }
