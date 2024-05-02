@@ -7,5 +7,3 @@ import './js/callme-button';
 import './js/modal-appointment';
 import './js/modal-consultation';
 import './js/modal-call';
-
-// comit1

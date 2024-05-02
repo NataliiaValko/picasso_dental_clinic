@@ -1,6 +1,6 @@
 @font-face {
-  font-family: AGOpusRoman;
-  src: url('../../fonts/AGOpus_Roman.ttf') format('truetype');
+  font-family: AGOpus;
+  src: url('../../fonts/AGOpusRoman.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -60,7 +60,7 @@
 }
 
 body {
-  font-family: var(--third-family);
+  font-family: var(--main-family);
   color: var(--color-dark);
 }
 
