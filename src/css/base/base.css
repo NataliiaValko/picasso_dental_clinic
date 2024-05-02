@@ -98,6 +98,8 @@ body {
 }
 
 .main-title {
+  margin-bottom: 24px;
+
   font-family: var(--main-family);
   font-weight: 400;
   font-size: 32px;
