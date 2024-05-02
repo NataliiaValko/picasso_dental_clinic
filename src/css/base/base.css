@@ -180,6 +180,7 @@ body {
 
   &:hover,
   &:focus {
+    color: var(--color-white);
     background-color: #202f39;
   }
 }
