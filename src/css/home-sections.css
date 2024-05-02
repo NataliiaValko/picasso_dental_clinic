@@ -1,4 +1,5 @@
 .home-section {
+  position: relative;
   margin-top: 40px;
   margin-bottom: 40px;
 
@@ -232,13 +233,33 @@
   }
 }
 
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .home-icon {
   position: absolute;
-  top: 0px;
-  right: 0px;
-  display: block;
+  z-index: 999;
+  top: -50%;
+  right: 40px;
   width: 162px;
   height: 162px;
-  stroke: var(--color-accent);
-  fill: var(--color-accent);
+
+  animation: rotate 15s linear infinite;
+
+  @media (max-width: 833px) {
+    display: none;
+  }
+
+  @media (min-width: 1440px) {
+    right: 70px;
+    width: 185px;
+    height: 185px;
+  }
+
 }
