@@ -1,18 +1,24 @@
 <header class="header">
   <div class="container header-container">
     <nav class="header-nav">
-      <a href="../index.html" lang="uk" class="header-logo">
+      <a
+        href="../index.html"
+        lang="uk"
+        class="header-logo"
+        aria-label="Homepage"
+      >
         <svg class="header-icon" width="74" height="58">
           <use href="../img/icons/header-icons.svg#icon-logo"></use>
         </svg>
       </a>
 
       <button
-        class="header-burger-menu js-open-mobile-menu"
+        class="header-burger-menu"
         type="button"
         aria-expanded="false"
         aria-controls="mobile-menu"
         aria-label="Open mobile menu"
+        data-mobile-menu-open
       >
         <svg width="24" height="24">
           <use href="../img/icons/header-icons.svg#icon-burger-menu"></use>

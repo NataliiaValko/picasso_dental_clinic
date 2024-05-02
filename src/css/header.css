@@ -1,7 +1,12 @@
 .header {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 9;
+
   backdrop-filter: blur(40px);
-  background: var(--header-bg-color);
-  border: 1px solid var(--header-border-color);
+  background: rgba(240, 241, 242, 0.4);
+  border: 1px solid var(--backdrop-color);
 }
 
 .header-container {
@@ -53,8 +58,8 @@
 .header-nav-link {
   position: relative;
   display: block;
-  padding-top: 57px;
-  padding-bottom: 40px;
+  padding-top: 59px;
+  padding-bottom: 58px;
 
   font-family: var(--main-family);
   font-size: 18px;
