@@ -91,7 +91,6 @@ body {
   color: var(--color-accent);
   text-align: center;
 }
-
 .main-text {
   font-family: var(--second-family);
   font-weight: 300;
@@ -102,52 +101,75 @@ body {
 }
 
 .button-main-dark {
+  width: 100%;
   padding: 16px 32px;
   border: none;
 
   background-color: var(--color-accent);
-  color: #fff;
-  font-family: var(--main-family);
+  color: var(--color-white);
   font-weight: 400;
   font-size: 20px;
   line-height: 120%;
   text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    background-color: #202f39;
+  }
+  /* даного кольору нема у змінних */
 }
 .button-secondary-dark {
+  width: 100%;
   border: 1px solid var(--color-accent);
   padding: 16px 32px;
 
   background-color: transparent;
   color: var(--color-accent);
-  font-family: var(--main-family);
   font-weight: 400;
   font-size: 20px;
   line-height: 120%;
   text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+  }
 }
 .button-main-light {
+  width: 100%;
   padding: 16px 32px;
   border: none;
 
-  background-color: #fff;
+  background-color: var(--color-white);
   color: var(--color-accent);
-  font-family: var(--main-family);
   font-weight: 400;
   font-size: 20px;
   line-height: 120%;
   text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    background-color: #202f39;
+  }
 }
 .button-secondary-light {
+  width: 100%;
   border: 1px solid var(--color-white);
   padding: 16px 32px;
 
   background-color: transparent;
   color: var(--color-white);
-  font-family: var(--main-family);
   font-weight: 400;
   font-size: 20px;
   line-height: 120%;
   text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-white);
+    color: var(--color-accent);
+  }
 }
 
 @media screen and (min-width: 375px) {
@@ -184,21 +206,5 @@ body {
     width: var(--desktop);
     padding-left: 70px;
     padding-right: 70px;
-  }
-  .button-secondary-light:hover,
-  .button-secondary-light:focus {
-    background-color: #fff;
-    color: #3f5b6f;
-  }
-  .button-secondary-dark:hover,
-  .button-secondary-dark:focus {
-    background-color: #3f5b6f;
-    color: #fff;
-  }
-  .button-main-dark:hover,
-  .button-main-dark:focus,
-  .button-main-light:hover,
-  .button-main-light:focus {
-    background-color: #202f39;
   }
 }
