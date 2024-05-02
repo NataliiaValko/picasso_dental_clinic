@@ -1,8 +1,8 @@
-<div class="modal-consultation__backdrop" id="consultation-modal">
-  <div class="modal-consultation__modal">
+<div class="modal-consultation--backdrop" id="consultation-modal">
+  <div class="modal-consultation--modal">
     <button
       type="button"
-      class="modal-consultation__close-button"
+      class="modal-consultation--close-button"
       id="consultation-modal-close"
     >
       <svg width="40" height="40">
@@ -10,16 +10,16 @@
       </svg>
     </button>
 
-    <h2 class="modal-consultation__modal__title">Онлайн консультація</h2>
+    <h2 class="modal-consultation--modal--title">Онлайн консультація</h2>
 
-    <p class="modal-consultation__modal__subtitle">
+    <p class="modal-consultation--modal--subtitle">
       Ви можете задати будь-яке питання, описати скарги та надіслати нам
       резултати досліджень.
       <br />
       Наші спеціалісти <span>зв’яжуться з вами</span> в найкоротші терміни
     </p>
 
-    <form class="modal-consultation__modal__form" id="consultation-form">
+    <form class="modal-consultation--modal--form" id="consultation-form">
       <input
         type="text"
         placeholder="ПІБ*"
@@ -44,48 +44,48 @@
       <input type="text" placeholder="Опис скарг*" maxlength="150" required />
       <input type="text" placeholder="Коментар" maxlength="150" />
 
-      <div class="modal-consultation__modal__form__title_box">
+      <div class="modal-consultation--modal--form--title-box">
         <h3>Завантажити файли</h3>
         <p>Завантажити результати КТ, рентгену чи інші дослідження</p>
       </div>
 
-      <label class="form_file_label" id="consultation-form-file-label">
-        <div class="form_file_icon_box">
+      <label class="form-file-label" id="consultation-form-file-label">
+        <div class="form-file-icon-box">
           <svg width="24" height="24">
             <use href="../img/icons/modal-sprite.svg#icon-file"></use>
           </svg>
-          <p class="form_file_prg">
+          <p class="form-file-prg">
             <span>Оберіть файл</span> чи перетягніть в цю область
           </p>
         </div>
 
         <input
           type="file"
-          class="form_file_input"
+          class="form-file-input"
           id="consultation-form-file"
         />
       </label>
 
-      <p class="form_file_clue" id="consultation-form-file-clue">
+      <p class="form-file-clue" id="consultation-form-file-clue">
         .PDF, .ZIP формати дозволені
       </p>
 
-      <label class="form_checkbox_label" id="checkbox-label">
-        <div class="form_checkbox_label__input_box">
+      <label class="form-checkbox-label" id="checkbox-label">
+        <div class="form-checkbox-label--input-box">
           <input
             type="checkbox"
-            class="form_checkbox"
+            class="form-checkbox"
             id="consultation-form-checkbox"
           />
-          <svg class="checkbox_icon-none" width="24" height="24">
+          <svg class="checkbox-icon-none" width="24" height="24">
             <use href="../img/icons/modal-sprite.svg#icon-StateNone"></use>
           </svg>
-          <svg class="checkbox_icon-done" width="24" height="24">
+          <svg class="checkbox-icon-done" width="24" height="24">
             <use href="../img/icons/modal-sprite.svg#icon-StateDone"></use>
           </svg>
         </div>
 
-        <p class="form_checkbox_title">
+        <p class="form-checkbox-title">
           Я погоджуюсь з
           <a href="http://" target="_blank" rel="noopener noreferrer"
             >Політикою Конфіденційності</a
