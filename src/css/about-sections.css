@@ -1,1 +1,231 @@
-/*  */
+.about-thumb {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  @media screen and (min-width: 834px) {
+    gap: 24px;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+.about-img-box {
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    gap: 24px;
+  }
+}
+.about-img-hidden {
+  display: none;
+  @media screen and (min-width: 1440px) {
+    display: block;
+  }
+}
+.about-text-box {
+  @media screen and (min-width: 375px) {
+    width: 332px;
+  }
+  @media screen and (min-width: 834px) {
+    width: 436px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 616px;
+  }
+}
+
+/* STYLES FOR OUR CLINIC */
+.clinic {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  @media screen and (min-width: 834px) {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+}
+@media screen and (min-width: 834px) {
+  .clinic::before {
+    display: block;
+    content: '01';
+    width: 173px;
+    position: absolute;
+    right: 39px;
+    top: 69px;
+    font-family: var(--main-family);
+    font-weight: 400;
+    font-size: 155px;
+    line-height: 97%;
+    color: rgba(63, 91, 111, 0.05);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .clinic::before {
+    right: 116px;
+    top: 70px;
+  }
+}
+.clinic-box {
+  position: relative;
+}
+.clinic-box::before {
+  z-index: -1;
+  display: block;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: -20px;
+  width: 375px;
+  height: 100px;
+  background-color: var(--color-accent);
+}
+@media screen and (min-width: 834px) {
+  .clinic-box::before {
+    left: -200px;
+    width: 100%;
+    height: 162px;
+  }
+}
+
+/* STYLES FOR DOCTORS */
+.doctors {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @media screen and (min-width: 834px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+@media screen and (min-width: 834px) {
+  .doctors::before {
+    display: block;
+    content: '02';
+    width: 173px;
+    position: absolute;
+    right: 39px;
+    top: 18px;
+    font-family: var(--main-family);
+    font-weight: 400;
+    font-size: 155px;
+    line-height: 97%;
+    color: rgba(63, 91, 111, 0.05);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .doctors::before {
+    right: 116px;
+    top: 51px;
+  }
+}
+/* STYLES FOR PHILOSOPHY */
+.philosophy {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @media screen and (min-width: 834px) {
+    padding-top: 50px;
+    padding-bottom: 35px;
+  }
+}
+@media screen and (min-width: 834px) {
+  .philosophy::before {
+    display: block;
+    content: '03';
+    width: 173px;
+    position: absolute;
+    right: 39px;
+    top: 50px;
+    font-family: var(--main-family);
+    font-weight: 400;
+    font-size: 155px;
+    line-height: 97%;
+    color: rgba(63, 91, 111, 0.05);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .philosophy::before {
+    right: 116px;
+    top: 80px;
+  }
+}
+.philosophy-box {
+  position: relative;
+}
+.philosophy-box::before {
+  z-index: -1;
+  display: block;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: -20px;
+  width: 375px;
+  height: 100px;
+  background-color: var(--color-accent);
+}
+@media screen and (min-width: 834px) {
+  .philosophy-box::before {
+    left: -200px;
+    width: 100%;
+    height: 162px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .philosophy-box::before {
+    background-color: #c1bfc0;
+  }
+}
+/* STYLES FOR CONTACTS */
+.about-contacts {
+  padding-top: 20px;
+  padding-bottom: 25px;
+
+  @media screen and (min-width: 834px) {
+    padding-top: 35px;
+    padding-bottom: 45px;
+  }
+}
+.about-contacts-title {
+  margin-bottom: 24px;
+
+  font-family: var(--main-family);
+  font-weight: 400;
+  font-size: 27px;
+  color: var(--color-accent);
+  text-align: center;
+  @media screen and (min-width: 375px) {
+    font-size: 32px;
+  }
+  @media screen and (min-width: 834px) {
+    text-align: start;
+  }
+}
+.about-contacts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  @media screen and (min-width: 375px) {
+  }
+  @media screen and (min-width: 834px) {
+    flex-direction: row;
+  }
+}
+/* ------------------------ */
+
+/* .about-number {
+  display: none;
+  @media screen and (min-width: 834px) {
+    z-index: -1;
+    display: block;
+    position: absolute;
+    top: -41px;
+    right: 0;
+
+    font-family: var(--main-family);
+    font-weight: 400;
+    font-size: 155px;
+    line-height: 97%;
+    color: rgba(63, 91, 111, 0.05);
+  }
+  @media screen and (min-width: 1440px) {
+    right: 63px;
+  }
+} */
