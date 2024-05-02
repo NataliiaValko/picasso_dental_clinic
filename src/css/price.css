@@ -1,1 +1,157 @@
-/*  */
+.services-table {
+  width: 100%;
+}
+
+.service-box {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-top: 1px solid #3f5b6f;
+  padding: 24px 0 40px 0;
+
+  @media (min-width: 834px) {
+    flex-direction: row;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    gap: 85px;
+  }
+
+  @media (min-width: 1440px) {
+    gap: 140px;
+  }
+}
+
+.number-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @media (min-width: 834px) {
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  @media (min-width: 1440px) {
+    gap: 74px;
+  }
+}
+
+.service-list-box {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @media (min-width: 834px) {
+    width: 100%;
+  }
+}
+
+.service-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-list-first {
+  gap: 24px;
+}
+
+.service-number-title-item {
+  align-self: start;
+  font-size: 28px;
+  text-align: start;
+
+  @media (min-width: 834px) {
+    font-size: 32px;
+  }
+}
+
+.main-table-title {
+  @media (min-width: 834px) {
+    min-width: 220px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 260px;
+  }
+}
+
+.list-subtitle {
+  margin-bottom: 24px;
+  margin-top: 16px;
+}
+
+.secondary-table-title {
+  font-family: var(--second-family), sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 122%;
+  color: var(--main-family);
+  width: 200px;
+
+  @media (min-width: 834px) {
+    font-size: 18px;
+    width: 240px;
+  }
+
+  @media (min-width: 1440px) {
+    min-width: 480px;
+  }
+}
+
+.secondary-table-subtitle {
+  font-family: var(--second-family), sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 122%;
+  color: var(--main-family);
+  width: 176px;
+
+  @media (min-width: 834px) {
+    font-size: 18px;
+
+    width: 240px;
+  }
+
+  @media (min-width: 1440px) {
+    min-width: 600px;
+  }
+}
+
+.price-text {
+  font-family: var(--second-family), sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 122%;
+  color: var(--color-accent);
+
+  @media (min-width: 834px) {
+    font-size: 18px;
+  }
+}
+
+.service-item {
+  margin-bottom: 8px;
+}
+
+.service-price-box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.long-price {
+  @media (max-width: 374px) {
+    width: 160px;
+  }
+  @media (min-width: 375px) {
+    width: 220px;
+  }
+}
+
+.exception-subtitle {
+  margin-top: 0;
+}
+
+.exception-price-box {
+  margin-bottom: 24px;
+}
