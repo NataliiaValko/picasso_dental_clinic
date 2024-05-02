@@ -1,6 +1,6 @@
 @font-face {
   font-family: AGOpusRoman;
-  src: url('../../fonts/AGOpusRoman.ttf') format('truetype');
+  src: url('../../fonts/AGOpus_Roman.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -84,6 +84,19 @@ body {
   margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
+  @media screen and (min-width: 375px) {
+    width: var(--mobile);
+  }
+  @media screen and (min-width: 834px) {
+    width: var(--tablet);
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: var(--desktop);
+    padding-left: 70px;
+    padding-right: 70px;
+  }
 }
 
 .main-title {
@@ -92,99 +105,99 @@ body {
   font-size: 32px;
   color: var(--color-accent);
   text-align: center;
-}
-
-.main-text {
-  font-family: var(--second-family);
-  font-weight: 300;
-  font-size: 15px;
-  line-height: 125%;
-  text-align: center;
-  color: var(--color-dark);
-}
-
-.button-main-dark {
-  padding: 16px 32px;
-  border: none;
-
-  background-color: var(--color-accent);
-  color: #fff;
-  font-family: var(--main-family);
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 120%;
-  text-transform: uppercase;
-}
-.button-secondary-dark {
-  border: 1px solid var(--color-accent);
-  padding: 16px 32px;
-
-  background-color: transparent;
-  color: var(--color-accent);
-  font-family: var(--main-family);
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 120%;
-  text-transform: uppercase;
-}
-.button-main-light {
-  padding: 16px 32px;
-  border: none;
-
-  background-color: #fff;
-  color: var(--color-accent);
-  font-family: var(--main-family);
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 120%;
-  text-transform: uppercase;
-}
-.button-secondary-light {
-  border: 1px solid var(--color-white);
-  padding: 16px 32px;
-
-  background-color: transparent;
-  color: var(--color-white);
-  font-family: var(--main-family);
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 120%;
-  text-transform: uppercase;
-}
-
-@media screen and (min-width: 375px) {
-  .container {
-    width: var(--mobile);
-  }
-  .main-title {
+  @media screen and (min-width: 375px) {
     font-size: 32px;
   }
-  .main-text {
-    font-size: 15px;
-  }
-}
-
-@media screen and (min-width: 834px) {
-  .container {
-    width: var(--tablet);
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-  .main-title {
+  @media screen and (min-width: 834px) {
     font-size: 48px;
     text-align: start;
   }
-  .main-text {
+}
+.main-text {
+  font-family: var(--second-family);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 125%;
+  text-align: center;
+  color: var(--color-dark);
+  @media screen and (min-width: 375px) {
+    font-size: 15px;
+  }
+  @media screen and (min-width: 834px) {
     font-size: 18px;
     line-height: 122%;
     text-align: start;
   }
 }
 
-@media screen and (min-width: 1440px) {
-  .container {
-    width: var(--desktop);
-    padding-left: 70px;
-    padding-right: 70px;
+.button-main-dark {
+  width: 100%;
+  padding: 16px 32px;
+  border: none;
+
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    background-color: #202f39;
+  }
+  /* даного кольору нема у змінних */
+}
+.button-secondary-dark {
+  width: 100%;
+  border: 1px solid var(--color-accent);
+  padding: 16px 32px;
+
+  background-color: transparent;
+  color: var(--color-accent);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+  }
+}
+.button-main-light {
+  width: 100%;
+  padding: 16px 32px;
+  border: none;
+
+  background-color: var(--color-white);
+  color: var(--color-accent);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    background-color: #202f39;
+  }
+}
+.button-secondary-light {
+  width: 100%;
+  border: 1px solid var(--color-white);
+  padding: 16px 32px;
+
+  background-color: transparent;
+  color: var(--color-white);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-white);
+    color: var(--color-accent);
   }
 }
