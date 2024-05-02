@@ -93,7 +93,7 @@
 
 .home-image-box {
   position: relative;
-  
+
   @media (max-width: 833px) {
     margin-bottom: 16px;
   }
@@ -131,10 +131,9 @@
     padding-left: 20px;
     padding-right: 20px;
   }
-  
 }
 
- @media (max-width: 833px) {
+@media (max-width: 833px) {
   .home-image-box::before {
     position: absolute;
     z-index: -1;
@@ -146,8 +145,7 @@
     right: 0;
     bottom: 0;
   }
-
-} 
+}
 
 .home-img-reverse {
   display: flex;
@@ -164,14 +162,12 @@
 @media (max-width: 833px) {
   .homepage-2 .home-image-reverse {
     width: 375px;
-      margin-left: auto;
-      margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
-@media (
-  max-width: 833px
-) {
+@media (max-width: 833px) {
   .homepage-2 .home-text-box {
     max-width: 375px;
     margin-left: auto;
