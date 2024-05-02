@@ -1,31 +1,34 @@
 .mobile-menu {
+  display: none;
   width: 375px;
   background-color: var(--color-white);
-  z-index: 999;
+  z-index: 10;
 
   text-align: center;
 
   position: fixed;
-  top: 0;
+  top: 20px;
   left: 50%;
   transform: translateX(-50%);
 
   overflow: auto;
+  pointer-events: none;
   opacity: 0;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity var(--time-function);
 
   &.is-open {
+    display: block;
     opacity: 1;
+    pointer-events: auto;
   }
 
-  @media (min-width: 834px) and (max-width: 1439px) {
-    top: 0;
-    right: 0;
-    left: auto;
+  @media screen and (min-width: 834px) {
+    top: 20px;
+    right: auto;
     transform: none;
   }
 
-  @media (min-width: 1440px) {
+  @media screen and (min-width: 1440px) {
     display: none;
   }
 }
@@ -56,19 +59,45 @@
 }
 
 .mobile-menu-nav-link {
+  position: relative;
   font-family: var(--main-family);
   font-weight: 400;
-  color: #3e403d;
+  color: var(--color-dark);
   font-size: 18px;
+
+  &:hover,
+  &:focus {
+    color: var(--color-accent);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-accent);
+    transform: scaleX(0);
+    transition: transform var(--time-function);
+  }
+
+  &:hover::after,
+  &:focus::after {
+    transform: scaleX(100%);
+  }
 }
 
 .mobile-menu-socials {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  width: 124px;
+  margin: 0 auto;
 }
 
 .mobile-menu-socials-link {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,5 +107,27 @@
   font-weight: 300;
   font-size: 18px;
   line-height: 122%;
-  color: #3e403d;
+  color: var(--color-dark);
+
+  &:hover,
+  &:focus {
+    color: var(--color-accent);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-accent);
+    transform: scaleX(0);
+    transition: transform var(--time-function);
+  }
+
+  &:hover::after,
+  &:focus::after {
+    transform: scaleX(100%);
+  }
 }

@@ -79,6 +79,7 @@ body {
 }
 
 .container {
+  position: relative;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
