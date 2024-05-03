@@ -10,6 +10,9 @@ import { openAppointmentModal } from './modal-appointment';
     ),
     mobileMenuBackdrop: document.querySelector('.mobile-menu-backdrop'),
     mobileMenuNavLinks: document.querySelectorAll('.mobile-menu-nav-link'),
+    mobileMenuSocialsLink: document.querySelectorAll(
+      '.mobile-menu-socials-link'
+    ),
   };
 
   const toggleMenu = () => {
@@ -38,6 +41,11 @@ import { openAppointmentModal } from './modal-appointment';
   // Закриваємо меню по кліку на бекдроп і на посилання в навігації
   refs.mobileMenuBackdrop.addEventListener('click', evt => {
     refs.mobileMenuNavLinks.forEach(link => {
+      if (evt.target === link) {
+        toggleMenu();
+      }
+    });
+    refs.mobileMenuSocialsLink.forEach(link => {
       if (evt.target === link) {
         toggleMenu();
       }
