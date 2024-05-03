@@ -1,5 +1,6 @@
 .price-section {
   position: relative;
+  overflow: hidden;
 }
 
 .services-table {
