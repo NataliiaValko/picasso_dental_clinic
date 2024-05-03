@@ -1,1 +1,216 @@
-/*  */
+.about-thumb {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  @media screen and (min-width: 834px) {
+    gap: 24px;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+.about-img-box {
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    gap: 24px;
+  }
+}
+.about-img-hidden {
+  display: none;
+  @media screen and (min-width: 1440px) {
+    display: block;
+  }
+}
+.about-text-box {
+  @media screen and (min-width: 375px) {
+    width: 332px;
+  }
+  @media screen and (min-width: 834px) {
+    width: 436px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 616px;
+  }
+}
+
+/* STYLES FOR OUR CLINIC */
+.clinic {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  @media screen and (min-width: 834px) {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+}
+.background,
+.background-light {
+  position: relative;
+}
+@media screen and (min-width: 834px) {
+  .background::before,
+  .background-light::before {
+    z-index: -1;
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 100px;
+    background-color: var(--color-accent);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .background-light::before {
+    background-color: #c1bfc0;
+  }
+}
+.clinic-box {
+  position: relative;
+}
+.clinic-box::before {
+  z-index: -1;
+  display: block;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100px;
+  background-color: var(--color-accent);
+}
+@media screen and (min-width: 834px) {
+  .clinic-box::before {
+    display: none;
+  }
+}
+.clinic-text-thumb {
+  position: relative;
+}
+@media screen and (min-width: 834px) {
+  .clinic-text-thumb::before,
+  .doctors-text-thumb::before,
+  .philosophy-text-thumb::before {
+    display: block;
+    content: '01';
+    width: 173px;
+    position: absolute;
+    right: 0px;
+    top: -45px;
+    font-family: var(--main-family);
+    font-weight: 400;
+    font-size: 155px;
+    line-height: 97%;
+    color: rgba(63, 91, 111, 0.05);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .clinic-text-thumb::before,
+  .doctors-text-thumb::before,
+  .philosophy-text-thumb::before {
+    top: -80px;
+  }
+}
+
+/* STYLES FOR DOCTORS */
+.doctors {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @media screen and (min-width: 834px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+.doctors-text-thumb {
+  position: relative;
+}
+@media screen and (min-width: 834px) {
+  .doctors-text-thumb::before {
+    content: '02';
+  }
+}
+@media screen and (min-width: 1440px) {
+  .doctors-text-thumb::before,
+  .philosophy-text-thumb::before {
+    right: 20px;
+  }
+}
+/* STYLES FOR PHILOSOPHY */
+.philosophy {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @media screen and (min-width: 834px) {
+    padding-top: 50px;
+    padding-bottom: 35px;
+  }
+}
+.philosophy-box {
+  position: relative;
+}
+.philosophy-box::before {
+  z-index: -1;
+  display: block;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 100px;
+  background-color: var(--color-accent);
+}
+@media screen and (min-width: 834px) {
+  .philosophy-box::before {
+    display: none;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .philosophy-box::before {
+    background-color: #c1bfc0;
+  }
+}
+.philosophy-text-thumb {
+  position: relative;
+}
+@media screen and (min-width: 834px) {
+  .philosophy-text-thumb::before {
+    content: '03';
+  }
+}
+/* STYLES FOR CONTACTS */
+.about-contacts {
+  padding-top: 20px;
+  padding-bottom: 25px;
+
+  @media screen and (min-width: 834px) {
+    padding-top: 35px;
+    padding-bottom: 45px;
+  }
+}
+.about-contacts-title {
+  margin-bottom: 24px;
+
+  font-family: var(--main-family);
+  font-weight: 400;
+  font-size: 27px;
+  color: var(--color-accent);
+  text-align: center;
+  @media screen and (min-width: 375px) {
+    font-size: 32px;
+  }
+  @media screen and (min-width: 834px) {
+    text-align: start;
+  }
+}
+.about-contacts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  @media screen and (min-width: 375px) {
+  }
+  @media screen and (min-width: 834px) {
+    flex-direction: row;
+  }
+}
+/* ------------------------ */
