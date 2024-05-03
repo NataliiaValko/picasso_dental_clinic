@@ -1,1 +1,63 @@
-<p>appointment-modal</p>
+<div class="modal-appointment-backdrop" id="appointment-modal">
+  <div class="modal-appointment-modal">
+    <button
+      type="button"
+      class="modal-appointment-close-button"
+      id="appointment-modal-close"
+      aria-label="Кнопка для закриття модального вікна"
+    >
+      <svg width="40" height="40">
+        <use href="../img/icons/modal-sprite.svg#modal_close"></use>
+      </svg>
+    </button>
+
+    <strong class="modal-appointment-modal-title">Запис на прийом</strong>
+
+    <p class="modal-appointment-modal-subtitle">
+      Ви можете задати будь-яке питання або записатись до одного з лікарів
+      клініки
+    </p>
+
+    <form class="modal-appointment-modal-form" id="appointment-form">
+      <div class="appointment-form-input-box">
+        <input
+          class="appointment-form-input"
+          type="text"
+          name="name"
+          placeholder="ПІБ*"
+          pattern="[а-яА-Яa-zA-Z\s]{1,50}"
+          required
+          title="Введіть коректне значення (максимум 50 символів)"
+        />
+        <input
+          class="appointment-form-input"
+          type="tel"
+          name="phone"
+          placeholder="Номер телефону*"
+          pattern="^\+?[0-9\s\-\(\)]{10,18}$"
+          required
+          title="Введіть коректний номер телефону"
+        />
+        <input
+          class="appointment-form-input"
+          type="email"
+          name="email"
+          placeholder="Email"
+          pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
+          title="Введіть коректний email"
+        />
+        <input
+          class="appointment-form-input"
+          type="text"
+          name="comment"
+          placeholder="Коментар"
+          maxlength="150"
+        />
+      </div>
+
+      <button type="submit" class="button-main-dark appointment-form-button">
+        Записатись
+      </button>
+    </form>
+  </div>
+</div>
