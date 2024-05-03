@@ -1,1 +1,152 @@
-/*  */
+@media (max-width: 833px) {
+    .homepage-hero-section {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-image: url(../img/hero/hero-1-375@1x.webp);
+    }
+  }
+
+  @media (max-width: 833px) and (-webkit-min-device-pixel-ratio: 2), 
+  (max-width: 833px) and (min-resolution: 192dpi), 
+  (max-width: 833px) and (min-resolution: 2dppx) {
+.homepage-hero-section {
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+background-image: url(../img/hero/hero-1-375@2x.webp);
+}
+}
+
+@media (max-width: 833px) and (-webkit-min-device-pixel-ratio: 3), 
+       (max-width: 833px) and (min-resolution: 288dpi), 
+       (max-width: 833px) and (min-resolution: 3dppx) {
+  .homepage-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-1-375@3x.webp);
+  }
+}
+
+@media (min-width: 834px) and (max-width: 1439px) {
+    .homepage-hero-section {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-image: url(../img/hero/hero-1-834@1x.webp);
+    }
+  }
+
+  @media (min-width: 834px) and (max-width: 1439px) and (-webkit-min-device-pixel-ratio: 2), 
+  (min-width: 834px) and (min-resolution: 192dpi), 
+  (min-width: 834px) and (min-resolution: 2dppx) {
+.homepage-hero-section {
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+background-image: url(../img/hero/hero-1-834@2x.webp);
+}
+}
+  
+@media (min-width: 834px) and (max-width: 1439px) and (-webkit-min-device-pixel-ratio: 3), 
+       (min-width: 834px) and (min-resolution: 288dpi), 
+       (min-width: 834px) and (min-resolution: 3dppx) {
+  .homepage-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-1-834@3x.webp);
+  }
+}
+
+@media (min-width: 1440px) {
+    .homepage-hero-section {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-image: url(../img/hero/hero-1-1440@1x.webp);
+    }
+  }
+
+  
+  @media (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 2), 
+  (min-width: 1440px) and (min-resolution: 192dpi), 
+  (min-width: 1440px) and (min-resolution: 2dppx) {
+.homepage-hero-section {
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+background-image: url(../img/hero/hero-1-1440@2x.webp);
+}
+}
+
+@media (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 3), 
+       (min-width: 1440px) and (min-resolution: 288dpi), 
+       (min-width: 1440px) and (min-resolution: 3dppx) {
+  .homepage-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-1-1440@3x.webp);
+  }
+}
+
+.hero-section {
+  position: relative;
+
+    padding-top: 126px;
+    padding-bottom: 40px;
+
+    @media (min-width: 834px) {
+        padding-top: 154px;
+        padding-bottom: 56px;
+    }
+    @media (min-width: 1440px) {
+        padding-top: 287px;
+        padding-bottom: 286px;
+    }
+    /*врахована висота хедера, треба буде підкоригувати як буде хедер */
+
+
+
+    
+}
+
+.main-header {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 39px;
+    text-transform: uppercase;
+    color: var(--color-accent);
+
+    margin-bottom: 24px;
+
+    @media (min-width: 834px) {
+        font-size: 72px;    }
+
+}
+
+.hero-section-text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--color-accent);
+
+    margin-bottom: 40px;
+
+    @media (min-width: 834px) {
+        font-size: 32px;    }
+
+}
+
+.hero-section-button {
+  @media (min-width: 834px) {
+    width: 195px;    }
+
+  @media (min-width: 1440px) {
+    position: absolute;
+  top: 40px;
+right: 70px;    }
+
+}
