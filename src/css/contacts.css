@@ -9,6 +9,13 @@
     background-color: var(--color-accent);
   }
 
+  @media (min-width: 834px) and (max-width: 1440px) {
+    height: 1066px;
+  }
+  /* @media (max-width: 1440px) {
+    height: 1066px;
+  } */
+
   @media (min-width: 1440px) {
     /* width: 1440px; */
     justify-content: center;
