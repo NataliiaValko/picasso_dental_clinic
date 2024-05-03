@@ -41,7 +41,22 @@
     padding-bottom: 50px;
   }
 }
-
+.background {
+  position: relative;
+}
+@media screen and (min-width: 834px) {
+  .background::before {
+    z-index: -1;
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100vh;
+    height: 100px;
+    background-color: var(--color-accent);
+  }
+}
 .clinic-box {
   position: relative;
 }
@@ -51,15 +66,15 @@
   content: '';
   position: absolute;
   bottom: 0;
-  right: -20px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100vh;
   height: 100px;
   background-color: var(--color-accent);
 }
 @media screen and (min-width: 834px) {
   .clinic-box::before {
-    right: 0;
-    height: 162px;
+    display: none;
   }
 }
 .clinic-text-thumb {
@@ -129,6 +144,20 @@
     padding-bottom: 35px;
   }
 }
+.background-light {
+  position: relative;
+}
+@media screen and (min-width: 834px) {
+  .background::before,
+  .background-light::before {
+    height: 162px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .background-light::before {
+    background-color: #c1bfc0;
+  }
+}
 .philosophy-box {
   position: relative;
 }
@@ -138,15 +167,15 @@
   content: '';
   position: absolute;
   bottom: 0;
-  right: -20px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100vh;
   height: 100px;
   background-color: var(--color-accent);
 }
 @media screen and (min-width: 834px) {
   .philosophy-box::before {
-    right: 0;
-    height: 162px;
+    display: none;
   }
 }
 @media screen and (min-width: 1440px) {
@@ -214,23 +243,3 @@
   }
 }
 /* ------------------------ */
-
-/* .about-number {
-  display: none;
-  @media screen and (min-width: 834px) {
-    z-index: -1;
-    display: block;
-    position: absolute;
-    top: -41px;
-    right: 0;
-
-    font-family: var(--main-family);
-    font-weight: 400;
-    font-size: 155px;
-    line-height: 97%;
-    color: rgba(63, 91, 111, 0.05);
-  }
-  @media screen and (min-width: 1440px) {
-    right: 63px;
-  }
-} */
