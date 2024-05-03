@@ -41,11 +41,13 @@
     padding-bottom: 50px;
   }
 }
-.background {
+.background,
+.background-light {
   position: relative;
 }
 @media screen and (min-width: 834px) {
-  .background::before {
+  .background::before,
+  .background-light::before {
     z-index: -1;
     display: block;
     content: '';
@@ -55,6 +57,11 @@
     width: 100vh;
     height: 100px;
     background-color: var(--color-accent);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .background-light::before {
+    background-color: #c1bfc0;
   }
 }
 .clinic-box {
@@ -142,20 +149,6 @@
   @media screen and (min-width: 834px) {
     padding-top: 50px;
     padding-bottom: 35px;
-  }
-}
-.background-light {
-  position: relative;
-}
-@media screen and (min-width: 834px) {
-  .background::before,
-  .background-light::before {
-    height: 162px;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .background-light::before {
-    background-color: #c1bfc0;
   }
 }
 .philosophy-box {
