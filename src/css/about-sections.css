@@ -88,13 +88,15 @@
   position: relative;
 }
 @media screen and (min-width: 834px) {
-  .clinic-text-thumb::before {
+  .clinic-text-thumb::before,
+  .doctors-text-thumb::before,
+  .philosophy-text-thumb::before {
     display: block;
     content: '01';
     width: 173px;
     position: absolute;
     right: 0px;
-    top: -34px;
+    top: -45px;
     font-family: var(--main-family);
     font-weight: 400;
     font-size: 155px;
@@ -103,7 +105,9 @@
   }
 }
 @media screen and (min-width: 1440px) {
-  .clinic-text-thumb::before {
+  .clinic-text-thumb::before,
+  .doctors-text-thumb::before,
+  .philosophy-text-thumb::before {
     top: -80px;
   }
 }
@@ -122,23 +126,13 @@
 }
 @media screen and (min-width: 834px) {
   .doctors-text-thumb::before {
-    display: block;
     content: '02';
-    width: 173px;
-    position: absolute;
-    right: 0;
-    top: -30px;
-    font-family: var(--main-family);
-    font-weight: 400;
-    font-size: 155px;
-    line-height: 97%;
-    color: rgba(63, 91, 111, 0.05);
   }
 }
 @media screen and (min-width: 1440px) {
-  .doctors-text-thumb::before {
-    right: 28px;
-    top: -35px;
+  .doctors-text-thumb::before,
+  .philosophy-text-thumb::before {
+    right: 20px;
   }
 }
 /* STYLES FOR PHILOSOPHY */
@@ -181,23 +175,7 @@
 }
 @media screen and (min-width: 834px) {
   .philosophy-text-thumb::before {
-    display: block;
     content: '03';
-    width: 173px;
-    position: absolute;
-    right: 0;
-    top: -45px;
-    font-family: var(--main-family);
-    font-weight: 400;
-    font-size: 155px;
-    line-height: 97%;
-    color: rgba(63, 91, 111, 0.05);
-  }
-}
-@media screen and (min-width: 1440px) {
-  .philosophy-text-thumb::before {
-    top: -80px;
-    right: 20px;
   }
 }
 /* STYLES FOR CONTACTS */
