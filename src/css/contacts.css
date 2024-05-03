@@ -1,4 +1,7 @@
 .contacts-map-container {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  width: 100%;
   @media (min-width: 1440px) {
     display: flex;
     flex-direction: row;
@@ -8,14 +11,11 @@
 .contacts-info-box {
   position: relative;
   padding: 20px;
-  width: 100%;
+  /* width: 100%; */
 
   @media (min-width: 375px) {
     min-width: 375px;
   }
-
-  background-color: var(--color-accent);
-  color: var(--color-white);
 
   @media (min-width: 834px) {
     padding: 40px;
