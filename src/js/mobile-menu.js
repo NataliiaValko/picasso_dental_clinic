@@ -4,8 +4,8 @@ import { openAppointmentModal } from './modal-appointment';
   const openMenuBtn = document.querySelector('[data-mobile-menu-open]');
   const closeMenuBtn = document.querySelector('[data-mobile-menu-close]');
   const body = document.querySelector('body');
-  const mobileAppoinmentModalBtn = document.getElementById(
-    'MobileAppointmentModalBtn'
+  const mobileAppointmentModalBtn = document.getElementById(
+    'mobileAppointmentModalBtn'
   );
   const toggleMenu = () => {
     const isMenuOpen =
@@ -22,7 +22,7 @@ import { openAppointmentModal } from './modal-appointment';
 
   openMenuBtn.addEventListener('click', toggleMenu);
   closeMenuBtn.addEventListener('click', toggleMenu);
-  mobileAppoinmentModalBtn.addEventListener('click', () => {
+  mobileAppointmentModalBtn.addEventListener('click', () => {
     toggleMenu();
     openAppointmentModal();
   });

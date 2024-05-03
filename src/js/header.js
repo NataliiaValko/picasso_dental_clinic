@@ -1,6 +1,6 @@
 import { openAppointmentModal } from './modal-appointment';
 (() => {
-  const appointmentModalBtn = document.getElementById('AppointmentModalBtn');
+  const appointmentModalBtn = document.getElementById('appointmentModalBtn');
 
   function setActiveMenuItem(menuSelector) {
     const currentPageUrl = window.location.href;
