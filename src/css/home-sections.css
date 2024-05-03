@@ -7,7 +7,6 @@
     padding-top: 50px;
     padding-bottom: 50px;
   }
-  
 }
 
 .about-section-box {
@@ -159,7 +158,6 @@
   }
 }
 
-
 @media (max-width: 833px) {
   .homepage-service-section .home-text-box {
     max-width: 375px;
@@ -237,7 +235,7 @@
 .about-section-icon {
   position: absolute;
   z-index: 999;
-  top: -50%;
+  top: -25%;
   right: 40px;
   width: 162px;
   height: 162px;
@@ -249,9 +247,9 @@
   }
 
   @media (min-width: 1440px) {
+    top: -32%;
     right: 70px;
     width: 185px;
     height: 185px;
   }
-
 }
