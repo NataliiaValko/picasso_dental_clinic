@@ -141,12 +141,12 @@ body {
   font-size: 20px;
   line-height: 120%;
   text-transform: uppercase;
+  transition: background-color var(--time-function);
 
   &:hover,
   &:focus {
     background-color: #202f39;
   }
-  /* даного кольору нема у змінних */
 }
 .button-secondary-dark {
   width: 100%;
@@ -159,6 +159,7 @@ body {
   font-size: 20px;
   line-height: 120%;
   text-transform: uppercase;
+  transition: background-color var(--time-function), color var(--time-function);
 
   &:hover,
   &:focus {
@@ -177,6 +178,7 @@ body {
   font-size: 20px;
   line-height: 120%;
   text-transform: uppercase;
+  transition: color var(--time-function), background-color var(--time-function);
 
   &:hover,
   &:focus {
@@ -195,6 +197,7 @@ body {
   font-size: 20px;
   line-height: 120%;
   text-transform: uppercase;
+  transition: background-color var(--time-function), color var(--time-function);
 
   &:hover,
   &:focus {
