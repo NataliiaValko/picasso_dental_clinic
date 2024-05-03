@@ -1,37 +1,57 @@
 import { openAppointmentModal } from './modal-appointment';
 (() => {
-  const mobileMenu = document.querySelector('[data-mobile-menu]');
-  const openMenuBtn = document.querySelector('[data-mobile-menu-open]');
-  const closeMenuBtn = document.querySelector('[data-mobile-menu-close]');
-  const body = document.querySelector('body');
-  const mobileAppointmentModalBtn = document.getElementById(
-    'mobileAppointmentModalBtn'
-  );
+  const refs = {
+    mobileMenu: document.querySelector('[data-mobile-menu]'),
+    openMenuBtn: document.querySelector('[data-mobile-menu-open]'),
+    closeMenuBtn: document.querySelector('[data-mobile-menu-close]'),
+    body: document.querySelector('body'),
+    mobileAppointmentModalBtn: document.getElementById(
+      'mobileAppointmentModalBtn'
+    ),
+    mobileMenuBackdrop: document.querySelector('.mobile-menu-backdrop'),
+    mobileMenuNavLinks: document.querySelectorAll('.mobile-menu-nav-link'),
+  };
+
   const toggleMenu = () => {
     const isMenuOpen =
-      openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
-    openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
-    mobileMenu.classList.toggle('mobile-menu-is-open');
+      refs.openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
+    refs.openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
+    refs.mobileMenu.classList.toggle('mobile-menu-is-open');
 
     if (!isMenuOpen) {
-      body.style.overflow = 'hidden'; // Блокуємо прокрутку
+      refs.body.style.overflow = 'hidden'; // Блокуємо прокрутку
     } else {
-      body.style.overflow = ''; // Розблоковуємо прокрутку
+      refs.body.style.overflow = ''; // Розблоковуємо прокрутку
     }
   };
 
-  openMenuBtn.addEventListener('click', toggleMenu);
-  closeMenuBtn.addEventListener('click', toggleMenu);
-  mobileAppointmentModalBtn.addEventListener('click', () => {
+  // Відкривання і закривання мобільного меню
+  refs.openMenuBtn.addEventListener('click', toggleMenu);
+  refs.closeMenuBtn.addEventListener('click', toggleMenu);
+
+  // Слухач на відкривання модалки запису на візит
+  refs.mobileAppointmentModalBtn.addEventListener('click', () => {
     toggleMenu();
     openAppointmentModal();
+  });
+
+  // Закриваємо меню по кліку на бекдроп і на посилання в навігації
+  refs.mobileMenuBackdrop.addEventListener('click', evt => {
+    refs.mobileMenuNavLinks.forEach(link => {
+      if (evt.target === link) {
+        toggleMenu();
+      }
+    });
+    if (evt.target === refs.mobileMenuBackdrop) {
+      toggleMenu();
+    }
   });
 
   // Close the mobile menu on wider screens if the device orientation changes
   window.matchMedia('(min-width: 1440px)').addEventListener('change', e => {
     if (!e.matches) return;
-    mobileMenu.classList.remove('mobile-menu-is-open');
-    openMenuBtn.setAttribute('aria-expanded', false);
-    body.style.overflow = ''; // Розблоковуємо прокрутку при зміні розміру вікна
+    refs.mobileMenu.classList.remove('mobile-menu-is-open');
+    refs.openMenuBtn.setAttribute('aria-expanded', false);
+    refs.body.style.overflow = ''; // Розблоковуємо прокрутку при зміні розміру вікна
   });
 })();

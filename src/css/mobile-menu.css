@@ -41,7 +41,8 @@
 
   @media screen and (min-width: 834px) {
     top: 0;
-    right: auto;
+    right: 0;
+    left: auto;
     transform: none;
   }
 
