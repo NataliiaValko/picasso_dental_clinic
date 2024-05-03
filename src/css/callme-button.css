@@ -1,1 +1,33 @@
-/*  */
+.callme-btn {
+    position: fixed;
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    right: 40px;
+    bottom: 50px;
+    border: none;
+    background: var(--color-accent);
+    animation: pulse 2s infinite alternate;
+  }
+  .callme-btn:hover svg {
+    animation: ringing 0.3s infinite alternate;
+  }
+  
+  @keyframes ringing {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(10deg); 
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); /* Початковий стан */
+    }
+    100% {
+      box-shadow: 0 0 0 15px rgba(63, 91, 111, 0.1); /* Змінений стан */
+    }
+  }
+  
