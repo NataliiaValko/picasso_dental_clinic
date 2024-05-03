@@ -1,56 +1,63 @@
-<div class="modal-appointment--backdrop" id="appointment-modal">
-  <div class="modal-appointment--modal">
+<div class="modal-appointment-backdrop" id="appointment-modal">
+  <div class="modal-appointment-modal">
     <button
       type="button"
-      class="modal-appointment--close-button"
+      class="modal-appointment-close-button"
       id="appointment-modal-close"
+      aria-label="Кнопка для закриття модального вікна"
     >
-      <svg
-        fill="currentColor"
-        viewBox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg"
-        width="40"
-        height="40"
-      >
+      <svg width="40" height="40">
         <use href="../img/icons/modal-sprite.svg#modal_close"></use>
       </svg>
     </button>
 
-    <h2 class="modal-appointment--modal--title">Запис на прийом</h2>
+    <strong class="modal-appointment-modal-title">Запис на прийом</strong>
 
-    <p class="modal-appointment--modal--subtitle">
+    <p class="modal-appointment-modal-subtitle">
       Ви можете задати будь-яке питання або записатись до одного з лікарів
       клініки
     </p>
 
-    <form class="modal-appointment--modal--form" id="appointment-form">
-      <input
-        type="text"
-        placeholder="ПІБ*"
-        pattern="[а-яА-Яa-zA-Z\s]{1,50}"
-        required
-        title="Введіть коректне значення (максимум 50 символів)"
-      />
-      <input
-        type="tel"
-        placeholder="Номер телефону*"
-        pattern="[\+ \(\)\-\d]{9,12}"
-        required
-        title="Введіть коректний номер телефону"
-      />
-      <input
-        type="email"
-        placeholder="Email"
-        pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
-        title="Введіть коректний email"
-      />
-      <input
-        type="text"
-        placeholder="Коментар"
-        maxlength="150"
-        title="Превышено максимальное количество символов (150)"
-      />
-      <button type="submit">Отправить</button>
+    <form class="modal-appointment-modal-form" id="appointment-form">
+      <div class="appointment-form-input-box">
+        <input
+          class="appointment-form-input"
+          type="text"
+          name="name"
+          placeholder="ПІБ*"
+          pattern="[а-яА-Яa-zA-Z\s]{1,50}"
+          required
+          title="Введіть коректне значення (максимум 50 символів)"
+        />
+        <input
+          class="appointment-form-input"
+          type="tel"
+          name="phone"
+          placeholder="Номер телефону*"
+          pattern="^\+?[0-9\s\-\(\)]{10,18}$"
+          required
+          title="Введіть коректний номер телефону"
+        />
+        <input
+          class="appointment-form-input"
+          type="email"
+          name="email"
+          placeholder="Email"
+          pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
+          title="Введіть коректний email"
+        />
+        <input
+          class="appointment-form-input"
+          type="text"
+          name="comment"
+          placeholder="Коментар"
+          maxlength="150"
+        />
+      </div>
+
+      <button type="submit" class="button-main-dark appointment-form-button">
+        Записатись
+      </button>
     </form>
   </div>
 </div>

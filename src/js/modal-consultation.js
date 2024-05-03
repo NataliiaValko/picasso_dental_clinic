@@ -95,7 +95,7 @@ consultationFormCheckbox.addEventListener('change', function () {
 consultationForm.addEventListener('submit', function (e) {
   e.preventDefault();
 
-  if (e.target[6].checked === false) {
+  if (e.target.checkbox.checked === false) {
     const checkboxLabel = document.getElementById('checkbox-label');
     checkboxLabel.style.color = '#ff0000';
     checkboxLabel.style.stroke = '#ff0000';
@@ -103,16 +103,16 @@ consultationForm.addEventListener('submit', function (e) {
   }
 
   const formData = {
-    name: e.target[0].value,
-    phone: e.target[1].value,
-    email: e.target[2].value,
-    complaint: e.target[3].value,
-    comment: e.target[4].value,
-    file: e.target[5].files[0],
+    name: e.target.name.value,
+    phone: e.target.phone.value,
+    email: e.target.email.value,
+    complaint: e.target.complaint.value,
+    comment: e.target.comment.value,
+    file: e.target.file.files[0],
   };
 
   console.log(formData);
 
-  e.target.reset();
-  closeModal();
+  // e.target.reset();
+  // closeModal();
 });

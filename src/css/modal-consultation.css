@@ -1,4 +1,4 @@
-.modal-consultation--backdrop {
+.modal-consultation-backdrop {
   display: none;
 
   position: fixed;
@@ -16,7 +16,7 @@
   }
 }
 
-.modal-consultation--close-button {
+.modal-consultation-close-button {
   position: absolute;
   top: 24px;
   right: 24px;
@@ -37,7 +37,7 @@
   }
 }
 
-.modal-consultation--modal {
+.modal-consultation-modal {
   position: relative;
   z-index: 1;
   top: 20px;
@@ -68,7 +68,7 @@
   }
 }
 
-.modal-consultation--modal--title {
+.modal-consultation-modal-title {
   font-family: var(--main-family);
 
   font-weight: 400;
@@ -95,7 +95,7 @@
   }
 }
 
-.modal-consultation--modal--subtitle {
+.modal-consultation-modal-subtitle {
   font-family: var(--second-family);
   font-weight: 300;
   font-size: 14px;
@@ -124,12 +124,12 @@
     margin-bottom: 40px;
   }
 
-  > span {
+  > .modal-consultation-modal-subtitle-accent {
     font-weight: 600;
   }
 }
 
-.modal-consultation--modal--form {
+.modal-consultation-modal-form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -143,8 +143,21 @@
   @media screen and (min-width: 834px) {
     width: 554px;
   }
+}
 
-  > input {
+.consultation-form-input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+
+  margin-bottom: 32px;
+
+  @media screen and (min-width: 834px) {
+    margin-bottom: 40px;
+  }
+
+  > .consultation-form-input {
     width: 100%;
     padding: 0 0 16px 0;
 
@@ -158,54 +171,22 @@
     line-height: 22px;
 
     color: var(--color-grey);
-
-    margin-bottom: 24px;
   }
 
-  > input:focus {
+  > .consultation-form-input:focus {
     border-bottom: 1px solid var(--color-accent);
   }
 
-  input:focus::placeholder {
+  > .consultation-form-input:focus::placeholder {
     color: var(--color-accent);
   }
 
-  > input:invalid:not(:placeholder-shown) {
+  > .consultation-form-input:invalid:not(:placeholder-shown) {
     border-color: red;
-  }
-
-  > :nth-child(4) {
-    margin-bottom: 32px;
-
-    @media screen and (min-width: 834px) {
-      margin-bottom: 40px;
-    }
-  }
-
-  > button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 16px 32px;
-    gap: 20px;
-
-    width: 195px;
-    height: 56px;
-
-    border: none;
-    background: var(--color-accent);
-
-    font-family: var(--main-family);
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    text-transform: uppercase;
-
-    color: var(--color-white);
   }
 }
 
-.modal-consultation--modal--form--title-box {
+.modal-consultation-modal-form-title-box {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -215,7 +196,7 @@
 
   margin-bottom: 24px;
 
-  > h3 {
+  > .consultation-form-title-box-title {
     font-family: var(--second-family);
     font-weight: 500;
     font-size: 18px;
@@ -224,7 +205,7 @@
     color: var(--color-accent);
   }
 
-  > p {
+  > .consultation-form-title-box-prg {
     font-family: var(--second-family);
     font-weight: 300;
     font-size: 18px;
@@ -274,7 +255,7 @@
       justify-content: center;
     }
 
-    > svg {
+    > .file-icon {
       margin-bottom: 8px;
 
       fill: inherit;
@@ -299,7 +280,7 @@
         width: 320px;
       }
 
-      > span {
+      > .form-file-prg-accent {
         display: block;
         text-align: center;
         font-weight: 600;
@@ -347,7 +328,7 @@
     width: 430px;
   }
 
-  > .form-checkbox-label--input-box {
+  > .form-checkbox-label-input-box {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -381,12 +362,12 @@
     font-size: 12px;
     line-height: 18px;
 
-    > a {
+    > .link-policy {
       position: relative;
       color: inherit;
     }
 
-    > a::after {
+    > .link-policy::after {
       content: '';
       position: absolute;
       bottom: 0;
@@ -397,4 +378,9 @@
       border-bottom-color: inherit;
     }
   }
+}
+
+.consultation-form-button {
+  width: 195px;
+  height: 56px;
 }

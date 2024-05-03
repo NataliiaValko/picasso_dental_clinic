@@ -1,66 +1,96 @@
-<div class="modal-consultation--backdrop" id="consultation-modal">
-  <div class="modal-consultation--modal">
+<div class="modal-consultation-backdrop" id="consultation-modal">
+  <div class="modal-consultation-modal">
     <button
       type="button"
-      class="modal-consultation--close-button"
+      class="modal-consultation-close-button"
       id="consultation-modal-close"
+      aria-label="Кнопка для закриття модального вікна"
     >
       <svg width="40" height="40">
         <use href="../img/icons/modal-sprite.svg#modal_close"></use>
       </svg>
     </button>
 
-    <h2 class="modal-consultation--modal--title">Онлайн консультація</h2>
+    <strong class="modal-consultation-modal-title">Онлайн консультація</strong>
 
-    <p class="modal-consultation--modal--subtitle">
+    <p class="modal-consultation-modal-subtitle">
       Ви можете задати будь-яке питання, описати скарги та надіслати нам
       резултати досліджень.
       <br />
-      Наші спеціалісти <span>зв’яжуться з вами</span> в найкоротші терміни
+      Наші спеціалісти
+      <span class="modal-consultation-modal-subtitle-accent"
+        >зв’яжуться з вами</span
+      >
+      в найкоротші терміни
     </p>
 
-    <form class="modal-consultation--modal--form" id="consultation-form">
-      <input
-        type="text"
-        placeholder="ПІБ*"
-        pattern="[а-яА-Яa-zA-Z\s]{1,50}"
-        title="Введіть коректне значення (максимум 50 символів)"
-        required
-      />
-      <input
-        type="tel"
-        placeholder="Номер телефону*"
-        pattern="\+?[0-9\s\-\(\)]+"
-        title="Введіть коректний номер телефону"
-        required
-      />
-      <input
-        type="email"
-        placeholder="Email*"
-        pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
-        title="Введіть коректний email"
-        required
-      />
-      <input type="text" placeholder="Опис скарг*" maxlength="150" required />
-      <input type="text" placeholder="Коментар" maxlength="150" />
+    <form class="modal-consultation-modal-form" id="consultation-form">
+      <div class="consultation-form-input-box">
+        <input
+          class="consultation-form-input"
+          type="text"
+          name="name"
+          placeholder="ПІБ*"
+          pattern="[а-яА-Яa-zA-Z\s]{1,50}"
+          title="Введіть коректне значення (максимум 50 символів)"
+          required
+        />
+        <input
+          class="consultation-form-input"
+          type="tel"
+          name="phone"
+          placeholder="Номер телефону*"
+          pattern="^\+?[0-9\s\-\(\)]{10,18}$"
+          title="Введіть коректний номер телефону"
+          required
+        />
+        <input
+          class="consultation-form-input"
+          type="email"
+          name="email"
+          placeholder="Email*"
+          pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
+          title="Введіть коректний email"
+          required
+        />
+        <input
+          class="consultation-form-input"
+          type="text"
+          name="complaint"
+          placeholder="Опис скарг*"
+          maxlength="150"
+          required
+        />
+        <input
+          class="consultation-form-input"
+          type="text"
+          name="comment"
+          placeholder="Коментар"
+          maxlength="150"
+        />
+      </div>
 
-      <div class="modal-consultation--modal--form--title-box">
-        <h3>Завантажити файли</h3>
-        <p>Завантажити результати КТ, рентгену чи інші дослідження</p>
+      <div class="modal-consultation-modal-form-title-box">
+        <p class="consultation-form-title-box-title">Завантажити файли</p>
+        <p class="consultation-form-title-box-prg">
+          Завантажити результати КТ, рентгену чи інші дослідження
+        </p>
       </div>
 
       <label class="form-file-label" id="consultation-form-file-label">
         <div class="form-file-icon-box">
-          <svg width="24" height="24">
+          <svg width="24" height="24" class="file-icon">
             <use href="../img/icons/modal-sprite.svg#icon-file"></use>
           </svg>
           <p class="form-file-prg">
-            <span>Оберіть файл</span> чи перетягніть в цю область
+            <span class="form-file-prg-accent">Оберіть файл</span> чи
+            перетягніть в цю область
           </p>
         </div>
 
         <input
           type="file"
+          name="file"
           class="form-file-input"
           id="consultation-form-file"
         />
@@ -71,9 +101,10 @@
       </p>
 
       <label class="form-checkbox-label" id="checkbox-label">
-        <div class="form-checkbox-label--input-box">
+        <div class="form-checkbox-label-input-box">
           <input
             type="checkbox"
+            name="checkbox"
             class="form-checkbox"
             id="consultation-form-checkbox"
           />
@@ -87,14 +118,20 @@
 
         <p class="form-checkbox-title">
           Я погоджуюсь з
-          <a href="http://" target="_blank" rel="noopener noreferrer"
+          <a
+            href="http://"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link-policy"
             >Політикою Конфіденційності</a
           >
           Picasso Dental Clinic та надаю дозвіл на обробку персональних даних
         </p>
       </label>
 
-      <button type="submit">Записатись</button>
+      <button type="submit" class="button-main-dark consultation-form-button">
+        Надіслати
+      </button>
     </form>
   </div>
 </div>

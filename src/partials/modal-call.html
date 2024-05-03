@@ -1,1 +1,47 @@
-<p>appointment-modal</p>
+<div class="modal-call-backdrop" id="call-modal">
+  <div class="modal-call-modal">
+    <button
+      type="button"
+      class="modal-call-close-button"
+      id="call-modal-close"
+      aria-label="Кнопка для закриття модального вікна"
+    >
+      <svg width="40" height="40">
+        <use href="../img/icons/modal-sprite.svg#modal_close"></use>
+      </svg>
+    </button>
+
+    <strong class="modal-call-modal-title">Замовте дзвінок</strong>
+
+    <p class="modal-call-modal-subtitle">
+      і ми вам зателефонуємо найближчім часом
+    </p>
+
+    <form class="modal-call-modal-form" id="call-form">
+      <div class="call-form-input-box">
+        <input
+          class="call-form-input"
+          type="text"
+          name="name"
+          placeholder="ПІБ*"
+          pattern="[а-яА-Яa-zA-Z\s]{1,50}"
+          required
+          title="Введіть коректне значення (максимум 50 символів)"
+        />
+        <input
+          class="call-form-input"
+          type="tel"
+          name="phone"
+          placeholder="Номер телефону*"
+          pattern="^\+?[0-9\s\-\(\)]{10,18}$"
+          required
+          title="Введіть коректний номер телефону"
+        />
+      </div>
+
+      <button type="submit" class="button-main-dark call-form-button">
+        Записатись
+      </button>
+    </form>
+  </div>
+</div>

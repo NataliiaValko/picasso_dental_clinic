@@ -9,8 +9,8 @@ export function openAppointmentModal() {
     console.error('Modal not found');
     return;
   }
-  appointmentModal.style.display = 'block';
   document.body.style.overflow = 'hidden';
+  appointmentModal.style.display = 'block';
 }
 
 // Закрытие модального окна
@@ -20,8 +20,8 @@ function closeModal() {
     console.error('Modal not found');
     return;
   }
-  appointmentModal.style.display = 'none';
   document.body.style.overflow = 'auto';
+  appointmentModal.style.display = 'none';
 }
 
 // Обработчик клика на кнопку закрытия модального окна
@@ -53,10 +53,10 @@ appointmentForm.addEventListener('submit', function (e) {
   e.preventDefault();
 
   const formData = {
-    name: e.target[0].value,
-    phone: e.target[1].value,
-    email: e.target[2].value,
-    comment: e.target[3].value,
+    name: e.target.name.value,
+    phone: e.target.phone.value,
+    email: e.target.email.value,
+    comment: e.target.comment.value,
   };
 
   console.log(formData);
