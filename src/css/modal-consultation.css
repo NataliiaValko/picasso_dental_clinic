@@ -1,1 +1,386 @@
-/*  */
+.modal-consultation-backdrop {
+  display: none;
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(217, 217, 217, 0.5);
+
+  overflow-y: scroll;
+
+  padding-bottom: 20px;
+
+  @media screen and (min-width: 834px) {
+    padding-bottom: 50px;
+  }
+}
+
+.modal-consultation-close-button {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: transparent;
+  border: none;
+
+  @media screen and (min-width: 834px) {
+    top: 40px;
+    right: 40px;
+  }
+}
+
+.modal-consultation-modal {
+  position: relative;
+  z-index: 1;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+
+  padding: 64px 0 24px;
+  margin-bottom: 20px;
+
+  background: var(--color-white);
+
+  @media screen and (min-width: 375px) {
+    width: var(--mobile);
+  }
+
+  @media screen and (min-width: 834px) {
+    top: 50px;
+    width: 650px;
+    padding: 80px 48px 40px;
+
+    margin-bottom: 50px;
+  }
+}
+
+.modal-consultation-modal-title {
+  font-family: var(--main-family);
+
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 40px;
+
+  width: 290px;
+
+  text-align: center;
+
+  color: var(--color-accent);
+
+  margin-bottom: 16px;
+
+  @media screen and (min-width: 375px) {
+    font-size: 40px;
+    line-height: 47px;
+  }
+
+  @media screen and (min-width: 834px) {
+    width: 100%;
+    font-size: 48px;
+    line-height: 56px;
+  }
+}
+
+.modal-consultation-modal-subtitle {
+  font-family: var(--second-family);
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+
+  width: 290px;
+
+  margin-bottom: 32px;
+
+  color: var(--color-accent);
+
+  @media screen and (min-width: 375px) {
+    font-size: 16px;
+    line-height: 20px;
+
+    width: 315px;
+  }
+
+  @media screen and (min-width: 834px) {
+    font-size: 18px;
+    line-height: 22px;
+
+    width: 500px;
+
+    margin-bottom: 40px;
+  }
+
+  > .modal-consultation-modal-subtitle-accent {
+    font-weight: 600;
+  }
+}
+
+.modal-consultation-modal-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 290px;
+
+  @media screen and (min-width: 375px) {
+    width: 313px;
+  }
+
+  @media screen and (min-width: 834px) {
+    width: 554px;
+  }
+}
+
+.consultation-form-input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+
+  margin-bottom: 32px;
+
+  @media screen and (min-width: 834px) {
+    margin-bottom: 40px;
+  }
+
+  > .consultation-form-input {
+    width: 100%;
+    padding: 0 0 16px 0;
+
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--color-grey);
+
+    font-family: var(--second-family);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+
+    color: var(--color-grey);
+  }
+
+  > .consultation-form-input:focus {
+    border-bottom: 1px solid var(--color-accent);
+  }
+
+  > .consultation-form-input:focus::placeholder {
+    color: var(--color-accent);
+  }
+
+  > .consultation-form-input:invalid:not(:placeholder-shown) {
+    border-color: red;
+  }
+}
+
+.modal-consultation-modal-form-title-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+
+  gap: 8px;
+
+  margin-bottom: 24px;
+
+  > .consultation-form-title-box-title {
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+
+    color: var(--color-accent);
+  }
+
+  > .consultation-form-title-box-prg {
+    font-family: var(--second-family);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+
+    color: var(--color-accent);
+  }
+}
+
+.form-file-label {
+  width: 100%;
+  height: 140px;
+
+  border: 1px dashed;
+  border-color: var(--color-accent);
+  fill: var(--color-accent);
+  color: var(--color-accent);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  margin-bottom: 16px;
+
+  position: relative;
+
+  .form-file-icon-box {
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    padding-top: 32px;
+    background-color: var(--color-white);
+
+    @media screen and (min-width: 834px) {
+      flex-direction: row;
+      padding-top: 0;
+      justify-content: center;
+    }
+
+    > .file-icon {
+      margin-bottom: 8px;
+
+      fill: inherit;
+
+      @media screen and (min-width: 834px) {
+        margin-bottom: 0;
+        margin-right: 8px;
+      }
+    }
+
+    > .form-file-prg {
+      font-family: var(--second-family);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+
+      width: 213px;
+
+      color: inherit;
+
+      @media screen and (min-width: 834px) {
+        width: 320px;
+      }
+
+      > .form-file-prg-accent {
+        display: block;
+        text-align: center;
+        font-weight: 600;
+
+        @media screen and (min-width: 834px) {
+          display: inline;
+        }
+      }
+    }
+  }
+}
+
+.form-file-input {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.form-file-clue {
+  font-family: var(--second-family);
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+
+  text-align: center;
+
+  color: var(--color-accent);
+
+  margin-bottom: 32px;
+}
+
+.form-checkbox-label {
+  display: flex;
+  gap: 8px;
+
+  cursor: pointer;
+
+  width: 100%;
+  margin-bottom: 32px;
+
+  color: var(--color-accent);
+  stroke: var(--color-accent);
+
+  @media screen and (min-width: 834px) {
+    width: 430px;
+  }
+
+  > .form-checkbox-label-input-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    > .form-checkbox {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+    }
+
+    .checkbox-icon-none {
+      stroke: inherit;
+    }
+
+    .checkbox-icon-done {
+      stroke: inherit;
+      display: none;
+    }
+    .form-checkbox:checked ~ .checkbox-icon-none {
+      display: none;
+    }
+    .form-checkbox:checked ~ .checkbox-icon-done {
+      display: block;
+    }
+  }
+
+  > .form-checkbox-title {
+    font-family: var(--second-family);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 18px;
+
+    > .link-policy {
+      position: relative;
+      color: inherit;
+    }
+
+    > .link-policy::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 1px;
+      width: 100%;
+      border-bottom: 1px solid;
+      border-bottom-color: inherit;
+    }
+  }
+}
+
+.consultation-form-button {
+  width: 195px;
+  height: 56px;
+}
