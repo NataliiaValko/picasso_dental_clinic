@@ -49,6 +49,7 @@
   --color-dark: #3e403d;
   --color-grey: #7c7e83;
   --color-white: #fff;
+  --backdrop-color: rgba(217, 217, 217, 0.5);
 
   --time-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -77,6 +78,7 @@ body {
 }
 
 .container {
+  position: relative;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
