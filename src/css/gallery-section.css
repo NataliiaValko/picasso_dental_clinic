@@ -1,1 +1,13 @@
-/*  */
+.portfolio-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  @media screen and (min-width: 834px) {
+    gap: 13px;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  @media screen and (min-width: 1440px) {
+    gap: 24px;
+  }
+}
