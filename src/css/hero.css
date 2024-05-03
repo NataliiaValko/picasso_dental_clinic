@@ -40,12 +40,12 @@
 }
 
 .portfolio-icon {
-  position: absolute;
+  position: fixed;
   z-index: -1;
   top: 40px;
   right: 40px;
-  width: 494px;
-  height: 494px;
+  width: 600px;
+  height: 600px;
   fill: #e2ecf2;
 
   @media (max-width: 833px) {
@@ -53,8 +53,8 @@
   }
 
   @media (min-width: 1440px) {
-    top: 35%;
-    right: -10%;
+    top: 150px;
+    right: -170px;
   }
 }
 
