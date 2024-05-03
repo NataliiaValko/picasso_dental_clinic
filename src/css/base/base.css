@@ -49,6 +49,7 @@
   --color-dark: #3e403d;
   --color-grey: #7c7e83;
   --color-white: #fff;
+  --backdrop-color: rgba(217, 217, 217, 0.5);
 
   --time-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -77,6 +78,7 @@ body {
 }
 
 .container {
+  position: relative;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -98,6 +100,8 @@ body {
 }
 
 .main-title {
+  margin-bottom: 24px;
+
   font-family: var(--main-family);
   font-weight: 400;
   font-size: 32px;
@@ -139,12 +143,12 @@ body {
   font-size: 20px;
   line-height: 120%;
   text-transform: uppercase;
+  transition: background-color var(--time-function);
 
   &:hover,
   &:focus {
     background-color: #202f39;
   }
-  /* даного кольору нема у змінних */
 }
 .button-secondary-dark {
   width: 100%;
@@ -157,6 +161,7 @@ body {
   font-size: 20px;
   line-height: 120%;
   text-transform: uppercase;
+  transition: background-color var(--time-function), color var(--time-function);
 
   &:hover,
   &:focus {
@@ -175,9 +180,11 @@ body {
   font-size: 20px;
   line-height: 120%;
   text-transform: uppercase;
+  transition: color var(--time-function), background-color var(--time-function);
 
   &:hover,
   &:focus {
+    color: var(--color-white);
     background-color: #202f39;
   }
 }
@@ -192,6 +199,7 @@ body {
   font-size: 20px;
   line-height: 120%;
   text-transform: uppercase;
+  transition: background-color var(--time-function), color var(--time-function);
 
   &:hover,
   &:focus {

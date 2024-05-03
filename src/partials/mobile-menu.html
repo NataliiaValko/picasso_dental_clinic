@@ -1,1 +1,79 @@
-<p>mob-menu</p>
+<div class="mobile-menu-backdrop" data-mobile-menu>
+  <div class="mobile-menu">
+    <div class="mobile-menu-container">
+      <button
+        type="button"
+        aria-label="Закрити мобільне меню з навігацією"
+        class="mobile-menu-close-button"
+        data-mobile-menu-close
+      >
+        <svg class="mobile-menu-close-icon" width="40" height="40">
+          <use href="../img/icons/header-icons.svg#icon-close"></use>
+        </svg>
+      </button>
+      <nav class="mobile-menu-nav">
+        <ul class="mobile-menu-nav-list">
+          <li>
+            <a href="../index.html" class="mobile-menu-nav-link"> Головна </a>
+          </li>
+          <li>
+            <a href="../about.html" class="mobile-menu-nav-link">Про нас</a>
+          </li>
+          <li>
+            <a href="../services.html" class="mobile-menu-nav-link">Послуги</a>
+          </li>
+          <li>
+            <a href="../portfolio.html" class="mobile-menu-nav-link"
+              >Портфоліо</a
+            >
+          </li>
+          <li>
+            <a
+              href="../index.html#contacts"
+              class="mobile-menu-nav-link"
+              id="contact-link"
+              >Контакти</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="mobile-menu-socials">
+        <li class="mobile-menu-socials-item">
+          <a
+            href="https://www.instagram.com/picasso_dental.clinic?utm_source=qr&igsh=MTh0NndsenliczB0aQ%3D%3D"
+            class="mobile-menu-socials-link"
+            aria-label="Відвідати нашу сторінку в Instagram"
+            target="_blank"
+            >Instagram
+            <svg width="24" height="24">
+              <use href="../img/icons/header-icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li class="mobile-menu-socials-item">
+          <a
+            href="https://www.facebook.com/profile.php?id=61555992634825"
+            class="mobile-menu-socials-link"
+            aria-label="Відвідати нашу сторінку в Facebook"
+            target="_blank"
+            >Facebook
+            <svg width="24" height="24">
+              <use href="../img/icons/header-icons.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+      <button
+        type="button"
+        class="button-main-dark"
+        aria-label="Записатись на візит"
+        id="mobileAppointmentModalBtn"
+      >
+        Записатись
+      </button>
+    </div>
+  </div>
+</div>
