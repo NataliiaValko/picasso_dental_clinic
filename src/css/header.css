@@ -38,6 +38,7 @@
   margin-left: auto;
   padding: 27px 20px 27px 8px;
 
+  stroke: var(--color-accent);
   border: none;
   background-color: transparent;
 
@@ -45,7 +46,7 @@
 
   &:hover,
   &:focus {
-    fill: var(--color-accent);
+    stroke: var(--color-dark);
     transform: scale(1.15);
   }
 
