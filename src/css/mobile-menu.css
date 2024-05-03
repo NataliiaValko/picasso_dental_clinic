@@ -15,7 +15,7 @@
 
   background: var(--backdrop-color);
 
-  &.is-open {
+  &.mobile-menu-is-open {
     pointer-events: all;
     opacity: 1;
     visibility: visible;

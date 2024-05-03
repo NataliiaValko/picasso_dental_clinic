@@ -8,7 +8,7 @@
     const isMenuOpen =
       openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
     openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
-    mobileMenu.classList.toggle('is-open');
+    mobileMenu.classList.toggle('mobile-menu-is-open');
 
     if (!isMenuOpen) {
       body.style.overflow = 'hidden'; // Блокуємо прокрутку
@@ -23,7 +23,7 @@
   // Close the mobile menu on wider screens if the device orientation changes
   window.matchMedia('(min-width: 1440px)').addEventListener('change', e => {
     if (!e.matches) return;
-    mobileMenu.classList.remove('is-open');
+    mobileMenu.classList.remove('mobile-menu-is-open');
     openMenuBtn.setAttribute('aria-expanded', false);
     body.style.overflow = ''; // Розблоковуємо прокрутку при зміні розміру вікна
   });
