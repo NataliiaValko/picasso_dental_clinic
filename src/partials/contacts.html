@@ -1,4 +1,4 @@
-<div class="contacts-map-container" id="contacts">
+<section class="contacts-map-container" id="contacts">
   <div class="contacts-info-box container">
     <div class="contacts-text-box">
       <h2 class="contacts-title main-title">Графік роботи та контакти</h2>
@@ -16,19 +16,29 @@
       </ul>
       <address class="address">
         <p class="contacts-text main-text">
-          Адреса: <br />вул. Бабʼяка (Бобяка) 1Б, ЖК "Crystal" (2 поверх),
-          <br />м. Ужгород, Україна, 88015
+          <span>Адреса:</span
+          ><span>вул. Бабʼяка (Бобяка) 1Б, ЖК "Crystal" (2 поверх),</span>
+          <span>м. Ужгород, Україна, 88015</span>
         </p>
-        <p class="contacts-text main-text">
-          Контактні номери: <br /><a
-            class="phone-number-link"
-            href="tel:+380972475747"
-            >+38 097 247 57 47</a
-          >
-          <br /><a class="phone-number-link" href="tel:+380992475747"
-            >+38 099 247 57 47</a
-          >
-        </p>
+        <div class="phone-numbers-wrapper">
+          <p class="contacts-text main-text">Контактні номери:</p>
+          <ul class="phone-list">
+            <li>
+              <a
+                class="phone-number-link contacts-text main-text"
+                href="tel:+380972475747"
+                >+38 097 247 57 47</a
+              >
+            </li>
+            <li>
+              <a
+                class="phone-number-link contacts-text main-text"
+                href="tel:+380992475747"
+                >+38 099 247 57 47</a
+              >
+            </li>
+          </ul>
+        </div>
       </address>
     </div>
     <ul class="contacts-btn-list">
@@ -38,7 +48,7 @@
         </button>
       </li>
       <li class="contacts-btn-item">
-        <button type="button" class="button-main-dark contacts-btn-dark">
+        <button type="button" class="button-secondary-light contacts-btn-dark">
           Консультація
         </button>
       </li>
@@ -54,4 +64,4 @@
     referrerpolicy="no-referrer-when-downgrade"
     class="map"
   ></iframe>
-</div>
+</section>
