@@ -1,4 +1,7 @@
+import { openAppointmentModal } from './modal-appointment';
 (() => {
+  const appointmentModalBtn = document.getElementById('AppointmentModalBtn');
+
   function setActiveMenuItem(menuSelector) {
     const currentPageUrl = window.location.href;
     const menuLinks = document.querySelectorAll(menuSelector);
@@ -9,6 +12,8 @@
       }
     });
   }
+
+  appointmentModalBtn.addEventListener('click', openAppointmentModal);
 
   document.addEventListener('DOMContentLoaded', () => {
     setActiveMenuItem('.mobile-menu-nav-link');

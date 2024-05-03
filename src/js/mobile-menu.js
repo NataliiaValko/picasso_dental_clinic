@@ -1,9 +1,12 @@
+import { openAppointmentModal } from './modal-appointment';
 (() => {
   const mobileMenu = document.querySelector('[data-mobile-menu]');
   const openMenuBtn = document.querySelector('[data-mobile-menu-open]');
   const closeMenuBtn = document.querySelector('[data-mobile-menu-close]');
   const body = document.querySelector('body');
-
+  const mobileAppoinmentModalBtn = document.getElementById(
+    'MobileAppointmentModalBtn'
+  );
   const toggleMenu = () => {
     const isMenuOpen =
       openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
@@ -19,6 +22,10 @@
 
   openMenuBtn.addEventListener('click', toggleMenu);
   closeMenuBtn.addEventListener('click', toggleMenu);
+  mobileAppoinmentModalBtn.addEventListener('click', () => {
+    toggleMenu();
+    openAppointmentModal();
+  });
 
   // Close the mobile menu on wider screens if the device orientation changes
   window.matchMedia('(min-width: 1440px)').addEventListener('change', e => {
