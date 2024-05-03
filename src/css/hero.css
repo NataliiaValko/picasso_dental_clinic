@@ -1,8 +1,108 @@
 @media (min-width: 834px) {
-  .homepage-hero-section {
+  .homepage-hero-section,
+  .about-hero-section,
+  .services-hero-section {
     margin-bottom: 50px;
   }
 }
+
+.hero-section {
+  position: relative;
+
+  padding-top: 126px;
+  padding-bottom: 40px;
+
+  @media (min-width: 834px) {
+    padding-top: 154px;
+    padding-bottom: 56px;
+  }
+  @media (min-width: 1440px) {
+    padding-top: 287px;
+    padding-bottom: 286px;
+  }
+  /*тут врахована висота хедера, треба буде підкоригувати як буде хедер */
+}
+
+.portfolio-hero-section {
+  position: relative;
+
+  padding-top: 126px;
+  padding-bottom: 40px;
+
+  @media (min-width: 834px) {
+    padding-top: 154px;
+    padding-bottom: 100px;
+  }
+  @media (min-width: 1440px) {
+    padding-top: 287px;
+    padding-bottom: 100px;
+  }
+}
+
+.portfolio-icon {
+  position: absolute;
+  z-index: -1;
+  top: 40px;
+  right: 40px;
+  width: 494px;
+  height: 494px;
+  fill: #e2ecf2;
+
+  @media (max-width: 833px) {
+    display: none;
+  }
+
+  @media (min-width: 1440px) {
+    top: 35%;
+    right: -10%;
+  }
+}
+
+.main-header {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 39px;
+  text-transform: uppercase;
+  color: var(--color-accent);
+
+  margin-bottom: 24px;
+
+  @media (min-width: 834px) {
+    font-size: 72px;
+  }
+}
+
+.hero-section-text {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--color-accent);
+
+  margin-bottom: 40px;
+
+  @media (min-width: 834px) {
+    font-size: 32px;
+  }
+}
+
+.hero-portfolio-text {
+  width: 800px;
+}
+
+.hero-section-button {
+  @media (min-width: 834px) {
+    width: 195px;
+  }
+
+  @media (min-width: 1440px) {
+    position: absolute;
+    top: 40px;
+    right: 70px;
+  }
+}
+
+/*
+/*homepage hero*/
 
 @media (max-width: 833px) {
   .homepage-hero-section {
@@ -97,58 +197,194 @@
   }
 }
 
-.hero-section {
-  position: relative;
+/*
+/*about page*/
 
-  padding-top: 126px;
-  padding-bottom: 40px;
-
-  @media (min-width: 834px) {
-    padding-top: 154px;
-    padding-bottom: 56px;
-  }
-  @media (min-width: 1440px) {
-    padding-top: 287px;
-    padding-bottom: 286px;
-  }
-  /*тут врахована висота хедера, треба буде підкоригувати як буде хедер */
-}
-
-.main-header {
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 39px;
-  text-transform: uppercase;
-  color: var(--color-accent);
-
-  margin-bottom: 24px;
-
-  @media (min-width: 834px) {
-    font-size: 72px;
+@media (max-width: 833px) {
+  .about-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-2-375@1x.webp);
   }
 }
 
-.hero-section-text {
-  font-family: var(--font-family);
-  font-weight: 400;
-  font-size: 16px;
-  color: var(--color-accent);
-
-  margin-bottom: 40px;
-
-  @media (min-width: 834px) {
-    font-size: 32px;
+@media (max-width: 833px) and (-webkit-min-device-pixel-ratio: 2),
+  (max-width: 833px) and (min-resolution: 192dpi),
+  (max-width: 833px) and (min-resolution: 2dppx) {
+  .about-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-2-375@2x.webp);
   }
 }
 
-.hero-section-button {
-  @media (min-width: 834px) {
-    width: 195px;
+@media (max-width: 833px) and (-webkit-min-device-pixel-ratio: 3),
+  (max-width: 833px) and (min-resolution: 288dpi),
+  (max-width: 833px) and (min-resolution: 3dppx) {
+  .about-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-2-375@3x.webp);
   }
+}
 
-  @media (min-width: 1440px) {
-    position: absolute;
-    top: 40px;
-    right: 70px;
+@media (min-width: 834px) and (max-width: 1439px) {
+  .about-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-2-834@1x.webp);
+  }
+}
+
+@media (min-width: 834px) and (max-width: 1439px) and (-webkit-min-device-pixel-ratio: 2),
+  (min-width: 834px) and (min-resolution: 192dpi),
+  (min-width: 834px) and (min-resolution: 2dppx) {
+  .about-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-2-834@2x.webp);
+  }
+}
+
+@media (min-width: 834px) and (max-width: 1439px) and (-webkit-min-device-pixel-ratio: 3),
+  (min-width: 834px) and (min-resolution: 288dpi),
+  (min-width: 834px) and (min-resolution: 3dppx) {
+  .about-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-2-834@3x.webp);
+  }
+}
+
+@media (min-width: 1440px) {
+  .about-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-2-1440@1x.webp);
+  }
+}
+
+@media (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 2),
+  (min-width: 1440px) and (min-resolution: 192dpi),
+  (min-width: 1440px) and (min-resolution: 2dppx) {
+  .about-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-2-1440@2x.webp);
+  }
+}
+
+@media (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 3),
+  (min-width: 1440px) and (min-resolution: 288dpi),
+  (min-width: 1440px) and (min-resolution: 3dppx) {
+  .about-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-2-1440@3x.webp);
+  }
+}
+
+/*
+/*services page*/
+
+@media (max-width: 833px) {
+  .services-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-3-375@1x.webp);
+  }
+}
+
+@media (max-width: 833px) and (-webkit-min-device-pixel-ratio: 2),
+  (max-width: 833px) and (min-resolution: 192dpi),
+  (max-width: 833px) and (min-resolution: 2dppx) {
+  .services-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-3-375@2x.webp);
+  }
+}
+
+@media (max-width: 833px) and (-webkit-min-device-pixel-ratio: 3),
+  (max-width: 833px) and (min-resolution: 288dpi),
+  (max-width: 833px) and (min-resolution: 3dppx) {
+  .services-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-3-375@3x.webp);
+  }
+}
+
+@media (min-width: 834px) and (max-width: 1439px) {
+  .services-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-3-834@1x.webp);
+  }
+}
+
+@media (min-width: 834px) and (max-width: 1439px) and (-webkit-min-device-pixel-ratio: 2),
+  (min-width: 834px) and (min-resolution: 192dpi),
+  (min-width: 834px) and (min-resolution: 2dppx) {
+  .services-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-3-834@2x.webp);
+  }
+}
+
+@media (min-width: 834px) and (max-width: 1439px) and (-webkit-min-device-pixel-ratio: 3),
+  (min-width: 834px) and (min-resolution: 288dpi),
+  (min-width: 834px) and (min-resolution: 3dppx) {
+  .services-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-3-834@3x.webp);
+  }
+}
+
+@media (min-width: 1440px) {
+  .services-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-3-1440@1x.webp);
+  }
+}
+
+@media (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 2),
+  (min-width: 1440px) and (min-resolution: 192dpi),
+  (min-width: 1440px) and (min-resolution: 2dppx) {
+  .services-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-3-1440@2x.webp);
+  }
+}
+
+@media (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 3),
+  (min-width: 1440px) and (min-resolution: 288dpi),
+  (min-width: 1440px) and (min-resolution: 3dppx) {
+  .services-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-3-1440@3x.webp);
   }
 }
