@@ -1,10 +1,12 @@
+// import axios from 'axios';
+
 // const openButton = document.getElementById('openModal');
 
 // openButton.addEventListener('click', openCallModal);
 
 // Функция для открытия модального окна
 export function openCallModal() {
-  const callModal = document.getElementById('call-modal');
+  const callModal = document.getElementById('call-modal-backdrop');
   if (!callModal) {
     console.error('Modal not found');
     return;
@@ -15,7 +17,7 @@ export function openCallModal() {
 
 // Закрытие модального окна
 function closeModal() {
-  const callModal = document.getElementById('call-modal');
+  const callModal = document.getElementById('call-modal-backdrop');
   if (!callModal) {
     console.error('Modal not found');
     return;
@@ -33,7 +35,7 @@ document
 
 // Закрытие модального окна при клике вне его области
 document
-  .getElementById('call-modal')
+  .getElementById('call-modal-backdrop')
   .addEventListener('click', function (event) {
     if (event.target === this) {
       closeModal();
@@ -49,7 +51,7 @@ document.addEventListener('keydown', function (event) {
 
 const callForm = document.getElementById('call-form');
 
-callForm.addEventListener('submit', function (e) {
+callForm.addEventListener('submit', async function (e) {
   e.preventDefault();
 
   const formData = {
@@ -57,7 +59,12 @@ callForm.addEventListener('submit', function (e) {
     phone: e.target.phone.value,
   };
 
-  console.log(formData);
+  // const res = await axios.post(
+  //   'http://localhost:3001/api/forms/call',
+  //   formData
+  // );
+
+  // console.log(res);
 
   e.target.reset();
   closeModal();
