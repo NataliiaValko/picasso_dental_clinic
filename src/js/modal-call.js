@@ -1,6 +1,6 @@
-const openButton = document.getElementById('openModal');
+// const openButton = document.getElementById('openModal');
 
-openButton.addEventListener('click', openCallModal);
+// openButton.addEventListener('click', openCallModal);
 
 // Функция для открытия модального окна
 export function openCallModal() {
