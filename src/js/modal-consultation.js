@@ -1,10 +1,15 @@
+// import axios from 'axios';
+
 // const openButton = document.getElementById('openModal');
 
 // openButton.addEventListener('click', openConsultationModal);
 
 // Функция для открытия модального окна
 export function openConsultationModal() {
-  const consultationModal = document.getElementById('consultation-modal');
+  const consultationModal = document.getElementById(
+    'consultation-modal-backdrop'
+  );
+  console.log(consultationModal);
   if (!consultationModal) {
     console.error('Modal not found');
     return;
@@ -15,7 +20,9 @@ export function openConsultationModal() {
 
 // Закрытие модального окна
 function closeModal() {
-  const consultationModal = document.getElementById('consultation-modal');
+  const consultationModal = document.getElementById(
+    'consultation-modal-backdrop'
+  );
   if (!consultationModal) {
     console.error('Modal not found');
     return;
@@ -33,7 +40,7 @@ document
 
 // Закрытие модального окна при клике вне его области
 document
-  .getElementById('consultation-modal')
+  .getElementById('consultation-modal-backdrop')
   .addEventListener('click', function (event) {
     if (event.target === this) {
       closeModal();
@@ -92,7 +99,7 @@ consultationFormCheckbox.addEventListener('change', function () {
   }
 });
 
-consultationForm.addEventListener('submit', function (e) {
+consultationForm.addEventListener('submit', async function (e) {
   e.preventDefault();
 
   if (e.target.checkbox.checked === false) {
@@ -102,17 +109,26 @@ consultationForm.addEventListener('submit', function (e) {
     return;
   }
 
-  const formData = {
-    name: e.target.name.value,
-    phone: e.target.phone.value,
-    email: e.target.email.value,
-    complaint: e.target.complaint.value,
-    comment: e.target.comment.value,
-    file: e.target.file.files[0],
-  };
+  const formData = new FormData();
+  formData.append('name', e.target.name.value);
+  formData.append('phone', e.target.phone.value);
+  formData.append('email', e.target.email.value);
+  formData.append('complaint', e.target.complaint.value);
+  formData.append('comment', e.target.comment.value);
+  formData.append('file', e.target.file.files[0]);
 
-  console.log(formData);
+  // const res = await axios.post(
+  //   'http://localhost:3001/api/forms/consultation',
+  //   formData,
+  //   {
+  //     headers: {
+  //       'Content-Type': 'multipart/form-data',
+  //     },
+  //   }
+  // );
 
-  // e.target.reset();
-  // closeModal();
+  // console.log(res);
+
+  e.target.reset();
+  closeModal();
 });

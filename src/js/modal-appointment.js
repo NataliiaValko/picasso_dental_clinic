@@ -1,10 +1,14 @@
+// import axios from 'axios';
+
 // const openButton = document.getElementById('openModal');
 
 // openButton.addEventListener('click', openAppointmentModal);
 
 // Функция для открытия модального окна
 export function openAppointmentModal() {
-  const appointmentModal = document.getElementById('appointment-modal');
+  const appointmentModal = document.getElementById(
+    'appointment-modal-backdrop'
+  );
   if (!appointmentModal) {
     console.error('Modal not found');
     return;
@@ -15,7 +19,9 @@ export function openAppointmentModal() {
 
 // Закрытие модального окна
 function closeModal() {
-  const appointmentModal = document.getElementById('appointment-modal');
+  const appointmentModal = document.getElementById(
+    'appointment-modal-backdrop'
+  );
   if (!appointmentModal) {
     console.error('Modal not found');
     return;
@@ -33,7 +39,7 @@ document
 
 // Закрытие модального окна при клике вне его области
 document
-  .getElementById('appointment-modal')
+  .getElementById('appointment-modal-backdrop')
   .addEventListener('click', function (event) {
     if (event.target === this) {
       closeModal();
@@ -49,7 +55,7 @@ document.addEventListener('keydown', function (event) {
 
 const appointmentForm = document.getElementById('appointment-form');
 
-appointmentForm.addEventListener('submit', function (e) {
+appointmentForm.addEventListener('submit', async function (e) {
   e.preventDefault();
 
   const formData = {
@@ -59,7 +65,12 @@ appointmentForm.addEventListener('submit', function (e) {
     comment: e.target.comment.value,
   };
 
-  console.log(formData);
+  // const res = await axios.post(
+  //   'http://localhost:3001/api/forms/appointment',
+  //   formData
+  // );
+
+  // console.log(res);
 
   e.target.reset();
   closeModal();
