@@ -1,6 +1,18 @@
+.portfolio {
+  padding-top: 40px;
+  padding-bottom: 50px;
+
+  @media screen and (min-width: 834px) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
 .portfolio-list {
+  position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   gap: 24px;
   @media screen and (min-width: 834px) {
     gap: 13px;
@@ -9,5 +21,49 @@
   }
   @media screen and (min-width: 1440px) {
     gap: 24px;
+  }
+}
+
+.portfolio-item:nth-child(n + 5) {
+  display: none;
+
+  @media screen and (min-width: 834px) {
+    display: block;
+  }
+}
+
+.portfolio-btn {
+  margin-top: 24px;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 834px) {
+    display: none;
+  }
+}
+
+.info-box {
+  @media screen and (min-width: 834px) {
+    position: absolute;
+    bottom: 0;
+  }
+  @media screen and (min-width: 1440px) {
+    bottom: 186px;
+  }
+}
+
+.info-subtitle {
+  width: 299px;
+  margin-bottom: 24px;
+
+  font-family: var(--main-family);
+  font-weight: 400;
+  font-size: 22px;
+  color: var(--color-accent);
+  @media screen and (min-width: 834px) {
+    width: 275px;
+    font-size: 32px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 459px;
   }
 }
