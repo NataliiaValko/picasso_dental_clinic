@@ -1,24 +1,24 @@
 .contacts-map-container {
   width: 100%;
-  @media (min-width: 1440px) {
-    display: flex;
-    flex-direction: row;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-  @media (min-width: 834px) {
-    background-color: var(--color-accent);
+  background-color: var(--color-accent);
+
+  @media (min-width: 375px) {
+    padding-bottom: 20px;
   }
 
   @media (min-width: 834px) and (max-width: 1440px) {
-    height: 1066px;
+    height: 1065px;
+    padding-bottom: 40px;
   }
-  /* @media (max-width: 1440px) {
-    height: 1066px;
-  } */
 
   @media (min-width: 1440px) {
-    /* width: 1440px; */
-    justify-content: center;
+    flex-direction: row;
+    padding-bottom: 0;
   }
 }
 
@@ -184,14 +184,19 @@
     min-width: 320px;
   }
 
+  @media (min-width: 375px) {
+    width: 375px;
+  }
+
   @media (min-width: 834px) {
+    width: 834px;
     height: 492px;
   }
 
   @media (min-width: 1440px) {
     width: 656px;
 
-    height: auto;
+    height: 618px;
     margin-right: auto;
   }
 }
