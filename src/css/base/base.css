@@ -207,3 +207,53 @@ body {
     color: var(--color-accent);
   }
 }
+
+.error-notification {
+  width: 258px;
+  height: 63px;
+
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+  font-family: var(--second-family);
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 13px;
+
+  color: var(--color-dark) !important;
+  background: #f8e3e3 !important;
+
+  @media screen and (min-width: 834px) {
+    font-size: 18px;
+    line-height: 22px;
+
+    width: 422px;
+    height: 104px;
+  }
+}
+
+.success-notification {
+  width: 258px;
+  height: 63px;
+
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+  font-family: var(--second-family);
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 13px;
+
+  color: var(--color-dark) !important;
+  background: #e3f8ee !important;
+
+  @media screen and (min-width: 834px) {
+    font-size: 18px;
+    line-height: 22px;
+
+    width: 422px;
+    height: 104px;
+  }
+}

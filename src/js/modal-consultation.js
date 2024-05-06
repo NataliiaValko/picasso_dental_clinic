@@ -1,8 +1,5 @@
-// import axios from 'axios';
-
-// const openButton = document.getElementById('openModal');
-
-// openButton.addEventListener('click', openConsultationModal);
+import axios from 'axios';
+import { errorNotification, successNotification } from './toastify';
 
 // Функция для открытия модального окна
 export function openConsultationModal() {
@@ -60,6 +57,7 @@ const consultationFormCheckbox = document.getElementById(
 );
 const fileInput = document.getElementById('consultation-form-file');
 
+// Состояние fileInput
 fileInput.addEventListener('change', function (e) {
   const file = e.target.files[0];
 
@@ -88,6 +86,7 @@ fileInput.addEventListener('change', function (e) {
   }
 });
 
+// Состояние Checkbox
 consultationFormCheckbox.addEventListener('change', function () {
   const checkboxLabel = document.getElementById('checkbox-label');
   if (this.checked) {
@@ -99,6 +98,7 @@ consultationFormCheckbox.addEventListener('change', function () {
   }
 });
 
+// Submit форми
 consultationForm.addEventListener('submit', async function (e) {
   e.preventDefault();
 
@@ -117,18 +117,23 @@ consultationForm.addEventListener('submit', async function (e) {
   formData.append('comment', e.target.comment.value);
   formData.append('file', e.target.file.files[0]);
 
-  // const res = await axios.post(
-  //   'http://localhost:3001/api/forms/consultation',
-  //   formData,
-  //   {
-  //     headers: {
-  //       'Content-Type': 'multipart/form-data',
-  //     },
-  //   }
-  // );
+  try {
+    const res = await axios.post(
+      'http://localhost:3001/api/forms/consultation',
+      formData,
+      {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      }
+    );
 
-  // console.log(res);
+    console.log(res);
 
-  e.target.reset();
-  closeModal();
+    successNotification();
+    e.target.reset();
+    closeModal();
+  } catch (error) {
+    errorNotification();
+  }
 });
