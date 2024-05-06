@@ -1,7 +1,6 @@
 import { openAppointmentModal } from './modal-appointment';
 (() => {
   const appointmentModalBtn = document.getElementById('appointmentModalBtn');
-  const contactsSection = document.getElementById('contacts');
   const contactsNavLink = document.getElementById('contact-link');
   const homeLink = document.getElementById('header-nav-link-home');
 
@@ -19,17 +18,9 @@ import { openAppointmentModal } from './modal-appointment';
     });
   }
 
-  // Плавний скрол
   contactsNavLink.addEventListener('click', evt => {
-    const contactsSectionOffsetTop = contactsSection?.offsetTop - 138;
-    if (!contactsSectionOffsetTop) return;
-    evt.preventDefault();
     homeLink.classList.remove('active');
-
-    window.scrollTo({
-      top: contactsSectionOffsetTop,
-      behavior: 'smooth',
-    });
+    contactsNavLink.classList.add('active');
   });
 
   appointmentModalBtn.addEventListener('click', openAppointmentModal);

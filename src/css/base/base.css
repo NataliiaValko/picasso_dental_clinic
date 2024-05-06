@@ -58,6 +58,16 @@
   --desktop: 1440px;
 }
 
+html {
+  scroll-behavior: smooth;
+  @media screen and (min-width: 300px) {
+    scroll-padding-top: 83px;
+  }
+  @media screen and (min-width: 1440px) {
+    scroll-padding-top: 138px;
+  }
+}
+
 body {
   font-family: var(--main-family);
   color: var(--color-dark);
