@@ -18,17 +18,12 @@ import { openAppointmentModal } from './modal-appointment';
   };
 
   const toggleMenu = () => {
-    console.log('toggle');
     const isMenuOpen =
       refs.openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
     refs.openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
     refs.mobileMenu.classList.toggle('mobile-menu-is-open');
-
-    if (!isMenuOpen) {
-      refs.body.style.overflow = 'hidden'; // Блокуємо прокрутку
-    } else {
-      refs.body.style.overflow = ''; // Розблоковуємо прокрутку
-    }
+    // Блокування скролу на body
+    refs.body.style.overflow = isMenuOpen ? '' : 'hidden';
   };
 
   // Відкривання і закривання мобільного меню
