@@ -19,7 +19,7 @@
 
 .portfolio-hero-section {
   position: relative;
-
+overflow: hidden;
   padding-top: 126px;
   padding-bottom: 40px;
 
@@ -32,25 +32,6 @@
     padding-bottom: 100px;
   }
 }
-
-/* .portfolio-icon {
-  position: absolute;
-  z-index: -1;
-  top: 40px;
-  right: -100px;
-  width: 600px;
-  height: 600px;
-  fill: #e2ecf2;
-
-  @media (max-width: 833px) {
-    display: none;
-  }
-
-  @media (min-width: 1440px) {
-    top: 150px;
-    right: -350px;
-  }
-} */
 
 .main-header {
   font-family: var(--font-family);
@@ -100,7 +81,7 @@
 
 @media (min-width: 1440px) {
   .portfolio-hero-section::before {
-    top: 40%;
+    top: 30%;
     right: 0;
   }
 }
