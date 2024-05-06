@@ -7,18 +7,18 @@ import { openAppointmentModal } from './modal-appointment';
   function setActiveMenuItem(menuSelector) {
     const currentPagePath = window.location.href;
     const menuLinks = document.querySelectorAll(menuSelector);
+    const isHomePage = window.location.pathname === '/';
 
     menuLinks.forEach(link => {
       const linkPath = new URL(link.href).href;
-      if (linkPath === currentPagePath) {
-        link.classList.add('active');
-      } else {
-        link.classList.remove('active');
-      }
+      link.classList.toggle(
+        'active',
+        linkPath === currentPagePath || (isHomePage && link === menuLinks[0])
+      );
     });
   }
 
-  contactsNavLink.addEventListener('click', evt => {
+  contactsNavLink.addEventListener('click', () => {
     homeLink.classList.remove('active');
     contactsNavLink.classList.add('active');
   });
