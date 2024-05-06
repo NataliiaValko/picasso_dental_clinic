@@ -25,10 +25,10 @@
 }
 
 .portfolio-item:nth-child(n + 5) {
-  display: none;
+  display: block;
 
-  @media screen and (min-width: 834px) {
-    display: block;
+  @media screen and (max-width: 833px) {
+    display: none;
   }
 }
 
@@ -39,6 +39,9 @@
   @media screen and (min-width: 834px) {
     display: none;
   }
+}
+.disabled-button {
+  opacity: 0.5;
 }
 
 .info-box {
@@ -68,7 +71,8 @@
   }
 }
 
-.button-width {
+.link-width {
+  text-align: center;
   @media screen and (min-width: 834px) {
     width: auto;
   }
