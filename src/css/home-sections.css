@@ -9,7 +9,15 @@
   }
 }
 
-.about-section-box {
+.homepage-about-box {
+  padding-top: 100px;
+}
+
+.homepage-portfolio-box {
+  padding-bottom: 100px;
+}
+
+.about-content-box {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -235,7 +243,7 @@
 .about-section-icon {
   position: absolute;
   z-index: 999;
-  top: -25%;
+  top: -42%;
   right: 40px;
   width: 162px;
   height: 162px;
@@ -247,7 +255,7 @@
   }
 
   @media (min-width: 1440px) {
-    top: -32%;
+    top: -55%;
     right: 70px;
     width: 185px;
     height: 185px;
