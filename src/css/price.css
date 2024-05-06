@@ -1,6 +1,18 @@
-/* .services-table {
-  width: 100%;
-} */
+.price-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.services-table {
+  padding-top: 40px;
+  @media (min-width: 834px) {
+    padding-top: 128px;
+  }
+
+  @media (min-width: 1440px) {
+    padding-top: 100px;
+  }
+}
 
 .service-box {
   display: flex;
@@ -154,4 +166,70 @@
 
 .exception-price-box {
   margin-bottom: 24px;
+}
+
+.ring-box-first {
+  @media (min-width: 1440px) {
+    background-image: url('../img/services-page/table-circle.png');
+    background-size: 643px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-position-y: -15%;
+  }
+}
+
+/* .ring-box-second::before {
+  
+    content: url('../img/services-page/table-circle.png');
+    position: absolute;
+    z-index: -1;
+    width: 643px;
+    top: 0;
+    left: 0;
+  } */
+
+/* @media (min-width: 1440px) {
+    content: url('../img/services-page/table-circle.png');
+    position: absolute;
+    z-index: -1;
+    width: 643px;
+    top: 35%;
+    left: -25%;
+  } */
+/* } */
+
+@media (min-width: 834px) {
+  .ring-box-second::before {
+    content: url('../img/services-page/table-circle.png');
+    position: absolute;
+    z-index: -1;
+    top: 23%;
+    left: -42%;
+    width: 643px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .ring-box-second::before {
+    top: 35%;
+    left: -25%;
+  }
+}
+
+@media (min-width: 834px) {
+  .ring-box-third::after {
+    content: url('../img/services-page/table-circle.png');
+    position: absolute;
+    z-index: -1;
+    top: 55%;
+    right: -35%;
+    width: 643px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .ring-box-third::after {
+    top: 50%;
+    right: -20%;
+  }
 }
