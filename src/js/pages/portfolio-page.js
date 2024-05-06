@@ -5,3 +5,4 @@ import '../callme-button';
 import '../modal-appointment';
 import '../modal-consultation';
 import '../modal-call';
+import '../loadmore-button';
