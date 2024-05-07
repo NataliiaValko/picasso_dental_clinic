@@ -96,6 +96,7 @@
   &:hover::after,
   &:focus::after {
     transform: scaleX(100%);
+    background-color: var(--header-hover-color);
   }
 }
 
