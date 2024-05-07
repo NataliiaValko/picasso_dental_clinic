@@ -13,37 +13,18 @@ import { openAppointmentModal } from './modal-appointment';
     mobileMenuSocialsLink: document.querySelectorAll(
       '.mobile-menu-socials-link'
     ),
-    contactsSection: document.getElementById('contacts'),
     mobileMenuContactLink: document.getElementById('mobile-menu-contact-link'),
     mobileMenuHomeLink: document.getElementById('mobile-nav-home-link'),
   };
 
   const toggleMenu = () => {
-    console.log('toggle');
     const isMenuOpen =
       refs.openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
     refs.openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
     refs.mobileMenu.classList.toggle('mobile-menu-is-open');
-
-    if (!isMenuOpen) {
-      refs.body.style.overflow = 'hidden'; // Блокуємо прокрутку
-    } else {
-      refs.body.style.overflow = ''; // Розблоковуємо прокрутку
-    }
+    // Блокування скролу на body
+    refs.body.style.overflow = isMenuOpen ? '' : 'hidden';
   };
-
-  // Плавний скрол
-  refs.mobileMenuContactLink.addEventListener('click', evt => {
-    const contactsSectionOffsetTop = refs.contactsSection?.offsetTop - 82;
-    if (!contactsSectionOffsetTop) return;
-    evt.preventDefault();
-    refs.mobileMenuHomeLink.classList.remove('active');
-    refs.mobileMenuContactLink.classList.add('active');
-    window.scrollTo({
-      top: contactsSectionOffsetTop,
-      behavior: 'smooth',
-    });
-  });
 
   // Відкривання і закривання мобільного меню
   refs.openMenuBtn.addEventListener('click', toggleMenu);
@@ -58,6 +39,8 @@ import { openAppointmentModal } from './modal-appointment';
   // Закриваємо меню по кліку на бекдроп і на посилання в навігації
   refs.mobileMenuBackdrop.addEventListener('click', evt => {
     if (evt.target === refs.mobileMenuContactLink) {
+      refs.mobileMenuHomeLink.classList.remove('active');
+      evt.target.classList.add('active');
       toggleMenu();
     }
     refs.mobileMenuNavLinks.forEach(link => {

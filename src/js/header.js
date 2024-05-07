@@ -1,35 +1,26 @@
 import { openAppointmentModal } from './modal-appointment';
 (() => {
   const appointmentModalBtn = document.getElementById('appointmentModalBtn');
-  const contactsSection = document.getElementById('contacts');
   const contactsNavLink = document.getElementById('contact-link');
   const homeLink = document.getElementById('header-nav-link-home');
 
   function setActiveMenuItem(menuSelector) {
     const currentPagePath = window.location.href;
     const menuLinks = document.querySelectorAll(menuSelector);
+    const isHomePage = window.location.pathname === '/';
 
     menuLinks.forEach(link => {
       const linkPath = new URL(link.href).href;
-      if (linkPath === currentPagePath) {
-        link.classList.add('active');
-      } else {
-        link.classList.remove('active');
-      }
+      link.classList.toggle(
+        'active',
+        linkPath === currentPagePath || (isHomePage && link === menuLinks[0])
+      );
     });
   }
 
-  // Плавний скрол
-  contactsNavLink.addEventListener('click', evt => {
-    const contactsSectionOffsetTop = contactsSection?.offsetTop - 138;
-    if (!contactsSectionOffsetTop) return;
-    evt.preventDefault();
+  contactsNavLink.addEventListener('click', () => {
     homeLink.classList.remove('active');
-
-    window.scrollTo({
-      top: contactsSectionOffsetTop,
-      behavior: 'smooth',
-    });
+    contactsNavLink.classList.add('active');
   });
 
   appointmentModalBtn.addEventListener('click', openAppointmentModal);

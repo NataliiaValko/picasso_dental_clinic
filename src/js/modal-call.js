@@ -1,8 +1,5 @@
-// import axios from 'axios';
-
-// const openButton = document.getElementById('openModal');
-
-// openButton.addEventListener('click', openCallModal);
+import axios from 'axios';
+import { errorNotification, successNotification } from './toastify';
 
 // Функция для открытия модального окна
 export function openCallModal() {
@@ -49,6 +46,7 @@ document.addEventListener('keydown', function (event) {
   }
 });
 
+// Submit форми
 const callForm = document.getElementById('call-form');
 
 callForm.addEventListener('submit', async function (e) {
@@ -59,13 +57,16 @@ callForm.addEventListener('submit', async function (e) {
     phone: e.target.phone.value,
   };
 
-  // const res = await axios.post(
-  //   'http://localhost:3001/api/forms/call',
-  //   formData
-  // );
+  try {
+    const res = await axios.post(
+      'http://localhost:3001/api/forms/call',
+      formData
+    );
 
-  // console.log(res);
-
-  e.target.reset();
-  closeModal();
+    successNotification();
+    e.target.reset();
+    closeModal();
+  } catch (error) {
+    errorNotification();
+  }
 });

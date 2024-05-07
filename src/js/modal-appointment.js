@@ -1,8 +1,5 @@
-// import axios from 'axios';
-
-// const openButton = document.getElementById('openModal');
-
-// openButton.addEventListener('click', openAppointmentModal);
+import axios from 'axios';
+import { errorNotification, successNotification } from './toastify';
 
 // Функция для открытия модального окна
 export function openAppointmentModal() {
@@ -65,13 +62,16 @@ appointmentForm.addEventListener('submit', async function (e) {
     comment: e.target.comment.value,
   };
 
-  // const res = await axios.post(
-  //   'http://localhost:3001/api/forms/appointment',
-  //   formData
-  // );
+  try {
+    const res = await axios.post(
+      'http://localhost:3001/api/forms/appointment',
+      formData
+    );
 
-  // console.log(res);
-
-  e.target.reset();
-  closeModal();
+    successNotification();
+    e.target.reset();
+    closeModal();
+  } catch (error) {
+    errorNotification();
+  }
 });
