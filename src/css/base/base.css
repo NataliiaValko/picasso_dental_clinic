@@ -50,7 +50,7 @@
   --color-grey: #7c7e83;
   --color-white: #fff;
   --backdrop-color: rgba(217, 217, 217, 0.5);
-
+  --header-hover-color: #202f39;
   --time-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   --mobile: 375px;
