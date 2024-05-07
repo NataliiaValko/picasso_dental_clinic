@@ -121,6 +121,10 @@
 .active {
   text-decoration: underline;
   color: var(--color-accent);
+  &:hover,
+  & focus {
+    color: var(--header-hover-color);
+  }
 }
 
 .mobile-menu-socials {
