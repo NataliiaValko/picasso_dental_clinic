@@ -63,7 +63,8 @@
   }
 
   @media screen and (min-width: 834px) {
-    top: 50px;
+    top: 50%;
+    transform: translate(-50%, -50%);
     width: 650px;
 
     padding: 80px 48px 40px;
