@@ -6,7 +6,6 @@ export function openConsultationModal() {
   const consultationModal = document.getElementById(
     'consultation-modal-backdrop'
   );
-  console.log(consultationModal);
   if (!consultationModal) {
     console.error('Modal not found');
     return;
@@ -66,6 +65,10 @@ fileInput.addEventListener('change', function (e) {
   }
 
   const fileLabel = document.getElementById('consultation-form-file-label');
+  const filePrg = document.getElementById('consultation-form-file-prg');
+  const filePrgAccent = document.getElementById(
+    'consultation-form-file-prg-accent'
+  );
   const fileClue = document.getElementById('consultation-form-file-clue');
 
   const allowedExtensions = ['png', 'jpeg', 'jpg', 'pdf', 'zip'];
@@ -76,6 +79,8 @@ fileInput.addEventListener('change', function (e) {
     fileLabel.style.color = '#3f5b6f';
     fileLabel.style.fill = '#3f5b6f';
     fileClue.style.color = '#3f5b6f';
+    filePrgAccent.textContent = 'Обрано файл -';
+    filePrg.textContent = file.name;
     fileClue.textContent = file.name;
   } else {
     fileLabel.style.borderColor = '#ff0000';
@@ -101,6 +106,13 @@ consultationFormCheckbox.addEventListener('change', function () {
 // Submit форми
 consultationForm.addEventListener('submit', async function (e) {
   e.preventDefault();
+
+  const fileLabel = document.getElementById('consultation-form-file-label');
+  const filePrg = document.getElementById('consultation-form-file-prg');
+  const filePrgAccent = document.getElementById(
+    'consultation-form-file-prg-accent'
+  );
+  const fileClue = document.getElementById('consultation-form-file-clue');
 
   if (e.target.checkbox.checked === false) {
     const checkboxLabel = document.getElementById('checkbox-label');
@@ -128,12 +140,26 @@ consultationForm.addEventListener('submit', async function (e) {
       }
     );
 
-    console.log(res);
-
+    fileLabel.style.borderColor = '#3f5b6f';
+    fileLabel.style.color = '#3f5b6f';
+    fileLabel.style.fill = '#3f5b6f';
+    filePrg.textContent = 'чи перетягніть в цю область';
+    filePrgAccent.textContent = 'Оберіть файл';
+    fileClue.textContent = '.JPG, .PNG, .PDF, .ZIP формати дозволені';
     successNotification();
     e.target.reset();
     closeModal();
-  } catch (error) {
+  } catch (e) {
+    if (
+      e.response.status === 400 &&
+      e.response.data.message === 'File too large'
+    ) {
+      fileLabel.style.borderColor = '#ff0000';
+      fileLabel.style.color = '#ff0000';
+      fileLabel.style.fill = '#ff0000';
+      filePrg.textContent = 'Файл занадто великий, будь ласка архівуйте його!';
+      filePrgAccent.textContent = '';
+    }
     errorNotification();
   }
 });
