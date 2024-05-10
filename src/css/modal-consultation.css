@@ -267,28 +267,32 @@
       }
     }
 
+    > .form-file-prg-accent {
+      display: block;
+      text-align: center;
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 600;
+
+      margin-right: 5px;
+
+      @media screen and (min-width: 834px) {
+        display: inline;
+      }
+    }
+
     > .form-file-prg {
       font-family: var(--second-family);
       font-weight: 400;
       font-size: 16px;
       line-height: 22px;
 
-      width: 213px;
+      /* width: 213px; */
 
       color: inherit;
 
       @media screen and (min-width: 834px) {
-        width: 320px;
-      }
-
-      > .form-file-prg-accent {
-        display: block;
-        text-align: center;
-        font-weight: 600;
-
-        @media screen and (min-width: 834px) {
-          display: inline;
-        }
+        /* width: 320px; */
       }
     }
   }
