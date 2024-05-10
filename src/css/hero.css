@@ -81,8 +81,9 @@ overflow: hidden;
 
 @media (min-width: 1440px) {
   .portfolio-hero-section::before {
-    top: 30%;
+    top: 15%;
     right: 0;
+    transform: rotate(9deg)
   }
 }
 
