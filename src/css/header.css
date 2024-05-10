@@ -96,12 +96,17 @@
   &:hover::after,
   &:focus::after {
     transform: scaleX(100%);
+    background-color: var(--header-hover-color);
   }
 }
 
 .active {
   text-decoration: underline;
   color: var(--color-accent);
+  &:hover,
+  & focus {
+    color: var(--header-hover-color);
+  }
 }
 
 .header-nav-btn {

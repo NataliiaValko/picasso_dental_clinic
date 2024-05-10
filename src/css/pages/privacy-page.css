@@ -1,11 +1,51 @@
-/* @import url('../base/reset.css');
+@import url('../base/reset.css');
 @import url('../base/modern-normalized.css');
-@import url('../base/header.css');
+@import url('../base/base.css');
+@import url('../header.css');
 @import url('../mobile-menu.css');
 @import url('../hero.css');
 @import url('../gallery-section.css');
 @import url('../footer.css');
 @import url('../modal-appointment.css');
 @import url('../modal-consultation.css');
-@import url('../modal-call.css'); */
-/* @import url('toastify-js/src/toastify.css'); */
+@import url('../modal-call.css');
+@import url('../callme-button.css');
+@import url('toastify-js/src/toastify.css');
+
+.privacy-box {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  -webkit-box-shadow: -1px 1px 3px 0px rgba(63, 91, 111, 1);
+  -moz-box-shadow: -1px 1px 3px 0px rgba(63, 91, 111, 1);
+  box-shadow: -1px 1px 3px 0px rgba(63, 91, 111, 1);
+
+  @media (min-width: 834px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+.privacy-title {
+  font-size: 24px;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: 834px) {
+    font-size: 46px;
+    max-width: 700px;
+  }
+}
+
+.privacy-text {
+  margin-bottom: 16px;
+  text-align: justify;
+  text-indent: 30px;
+
+  @media (min-width: 834px) {
+    text-indent: 60px;
+  }
+}

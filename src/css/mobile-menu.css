@@ -114,12 +114,17 @@
   &:hover::after,
   &:focus::after {
     transform: scaleX(100%);
+    background-color: var(--header-hover-color);
   }
 }
 
 .active {
   text-decoration: underline;
   color: var(--color-accent);
+  &:hover,
+  & focus {
+    color: var(--header-hover-color);
+  }
 }
 
 .mobile-menu-socials {
@@ -147,9 +152,10 @@
   line-height: 122%;
   color: var(--color-dark);
 
-  &:hover,
-  &:focus {
+  &:hover .mobile-menu-socials-icon,
+  &:focus &.mobile-menu-socials-icon {
     color: var(--color-accent);
+    fill: var(--header-hover-color);
   }
 
   &::after {
@@ -167,5 +173,10 @@
   &:hover::after,
   &:focus::after {
     transform: scaleX(100%);
+    background-color: var(--header-hover-color);
   }
+}
+
+.mobile-menu-socials-icon {
+  fill: var(--color-accent);
 }

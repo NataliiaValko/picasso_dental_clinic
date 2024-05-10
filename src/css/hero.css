@@ -1,1 +1,387 @@
-/*  */
+.hero-section {
+  position: relative;
+
+  padding-top: 126px;
+  padding-bottom: 40px;
+
+  @media (min-width: 834px) {
+    padding-top: 154px;
+    padding-bottom: 56px;
+    max-width: 750px;
+  }
+  @media (min-width: 1440px) {
+    padding-top: 287px;
+    padding-bottom: 286px;
+    max-width: 822px;
+  }
+  /*тут врахована висота хедера, треба буде підкоригувати як буде хедер */
+}
+
+.portfolio-hero-section {
+  position: relative;
+overflow: hidden;
+  padding-top: 126px;
+  padding-bottom: 40px;
+
+  @media (min-width: 834px) {
+    padding-top: 154px;
+    padding-bottom: 100px;
+  }
+  @media (min-width: 1440px) {
+    padding-top: 287px;
+    padding-bottom: 100px;
+  }
+}
+
+.main-header {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 39px;
+  text-transform: uppercase;
+  color: var(--color-accent);
+
+  margin-bottom: 24px;
+
+  @media (min-width: 834px) {
+    font-size: 72px;
+  }
+}
+
+.hero-section-text {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--color-accent);
+
+  margin-bottom: 40px;
+
+  @media (min-width: 834px) {
+    font-size: 32px;
+  }
+  @media (min-width: 1440px) {
+    margin-bottom: 0;
+  }
+}
+
+.hero-portfolio-text {
+  max-width: 800px;
+}
+
+@media (min-width: 834px) {
+  .portfolio-hero-section::before {
+    content: url('../img/hero/portfolio-icon.png');
+
+    position: absolute;
+    z-index: -1;
+    top: 2%;
+    right: 20%;
+    width: 494px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .portfolio-hero-section::before {
+    top: 30%;
+    right: 0;
+  }
+}
+
+.hero-section-button {
+  @media (min-width: 834px) {
+    width: 195px;
+  }
+
+  @media (min-width: 1440px) {
+    position: absolute;
+    top: 40px;
+    right: 70px;
+  }
+}
+
+/*
+/*homepage hero*/
+
+@media (max-width: 375px) {
+  .homepage-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-1-375@1x.webp);
+  }
+}
+
+@media (max-width: 375px) and (-webkit-min-device-pixel-ratio: 2),
+  (max-width: 375px) and (min-resolution: 192dpi),
+  (max-width: 375px) and (min-resolution: 2dppx) {
+  .homepage-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-1-375@2x.webp);
+  }
+}
+
+@media (max-width: 375px) and (-webkit-min-device-pixel-ratio: 3),
+  (max-width: 375px) and (min-resolution: 288dpi),
+  (max-width: 375px) and (min-resolution: 3dppx) {
+  .homepage-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-1-375@3x.webp);
+  }
+}
+
+@media (min-width: 376px) and (max-width: 834px) {
+  .homepage-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-1-834@1x.webp);
+  }
+}
+
+@media (min-width: 376px) and (max-width: 834px) and (-webkit-min-device-pixel-ratio: 2),
+  (min-width: 376px) and (min-resolution: 192dpi),
+  (min-width: 376px) and (min-resolution: 2dppx) {
+  .homepage-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-1-834@2x.webp);
+  }
+}
+
+@media (min-width: 376px) and (max-width: 834px) and (-webkit-min-device-pixel-ratio: 3),
+  (min-width: 376px) and (min-resolution: 288dpi),
+  (min-width: 376px) and (min-resolution: 3dppx) {
+  .homepage-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-1-834@3x.webp);
+  }
+}
+
+@media (min-width: 835px) {
+  .homepage-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-1-1440@1x.webp);
+  }
+}
+
+@media (min-width: 835px) and (-webkit-min-device-pixel-ratio: 2),
+  (min-width: 835px) and (min-resolution: 192dpi),
+  (min-width: 835px) and (min-resolution: 2dppx) {
+  .homepage-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-1-1440@2x.webp);
+  }
+}
+
+@media (min-width: 835px) and (-webkit-min-device-pixel-ratio: 3),
+  (min-width: 835px) and (min-resolution: 288dpi),
+  (min-width: 835px) and (min-resolution: 3dppx) {
+  .homepage-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-1-1440@3x.webp);
+  }
+}
+
+/*
+/*about page*/
+
+@media (max-width: 375px) {
+  .about-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-2-375@1x.webp);
+  }
+}
+
+@media (max-width: 375px) and (-webkit-min-device-pixel-ratio: 2),
+  (max-width: 375px) and (min-resolution: 192dpi),
+  (max-width: 375px) and (min-resolution: 2dppx) {
+  .about-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-2-375@2x.webp);
+  }
+}
+
+@media (max-width: 375px) and (-webkit-min-device-pixel-ratio: 3),
+  (max-width: 375px) and (min-resolution: 288dpi),
+  (max-width: 375px) and (min-resolution: 3dppx) {
+  .about-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-2-375@3x.webp);
+  }
+}
+
+@media (min-width: 376px) and (max-width: 834px) {
+  .about-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-2-834@1x.webp);
+  }
+}
+
+@media (min-width: 376px) and (max-width: 834px) and (-webkit-min-device-pixel-ratio: 2),
+  (min-width: 376px) and (min-resolution: 192dpi),
+  (min-width: 376px) and (min-resolution: 2dppx) {
+  .about-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-2-834@2x.webp);
+  }
+}
+
+@media (min-width: 376px) and (max-width: 834px) and (-webkit-min-device-pixel-ratio: 3),
+  (min-width: 376px) and (min-resolution: 288dpi),
+  (min-width: 376px) and (min-resolution: 3dppx) {
+  .about-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-2-834@3x.webp);
+  }
+}
+
+@media (min-width: 835px) {
+  .about-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-2-1440@1x.webp);
+  }
+}
+
+@media (min-width: 835px) and (-webkit-min-device-pixel-ratio: 2),
+  (min-width: 835px) and (min-resolution: 192dpi),
+  (min-width: 835px) and (min-resolution: 2dppx) {
+  .about-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-2-1440@2x.webp);
+  }
+}
+
+@media (min-width: 835px) and (-webkit-min-device-pixel-ratio: 3),
+  (min-width: 835px) and (min-resolution: 288dpi),
+  (min-width: 835px) and (min-resolution: 3dppx) {
+  .about-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-2-1440@3x.webp);
+  }
+}
+
+/*
+/*services page*/
+
+@media (max-width: 375px) {
+  .services-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-3-375@1x.webp);
+  }
+}
+
+@media (max-width: 375px) and (-webkit-min-device-pixel-ratio: 2),
+  (max-width: 375px) and (min-resolution: 192dpi),
+  (max-width: 375px) and (min-resolution: 2dppx) {
+  .services-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-3-375@2x.webp);
+  }
+}
+
+@media (max-width: 375px) and (-webkit-min-device-pixel-ratio: 3),
+  (max-width: 375px) and (min-resolution: 288dpi),
+  (max-width: 375px) and (min-resolution: 3dppx) {
+  .services-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-3-375@3x.webp);
+  }
+}
+
+@media (min-width: 376px) and (max-width: 834px) {
+  .services-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-3-834@1x.webp);
+  }
+}
+
+@media (min-width: 376px) and (max-width: 834px) and (-webkit-min-device-pixel-ratio: 2),
+  (min-width: 376px) and (min-resolution: 192dpi),
+  (min-width: 376px) and (min-resolution: 2dppx) {
+  .services-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-3-834@2x.webp);
+  }
+}
+
+@media (min-width: 376px) and (max-width: 834px) and (-webkit-min-device-pixel-ratio: 3),
+  (min-width: 376px) and (min-resolution: 288dpi),
+  (min-width: 376px) and (min-resolution: 3dppx) {
+  .services-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-3-834@3x.webp);
+  }
+}
+
+@media (min-width: 835px) {
+  .services-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-3-1440@1x.webp);
+  }
+}
+
+@media (min-width: 835px) and (-webkit-min-device-pixel-ratio: 2),
+  (min-width: 835px) and (min-resolution: 192dpi),
+  (min-width: 835px) and (min-resolution: 2dppx) {
+  .services-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-3-1440@2x.webp);
+  }
+}
+
+@media (min-width: 835px) and (-webkit-min-device-pixel-ratio: 3),
+  (min-width: 835px) and (min-resolution: 288dpi),
+  (min-width: 835px) and (min-resolution: 3dppx) {
+  .services-hero-section {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../img/hero/hero-3-1440@3x.webp);
+  }
+}
