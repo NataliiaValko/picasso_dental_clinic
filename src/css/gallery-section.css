@@ -31,6 +31,18 @@
     display: none;
   }
 }
+.portfolio-picture {
+  display: block;
+  @media screen and (min-width: 375px) {
+    height: 335px;
+  }
+  @media screen and (min-width: 834px) {
+    height: 306px;
+  }
+  @media screen and (min-width: 1440px) {
+    height: 528px;
+  }
+}
 
 .portfolio-btn {
   margin-top: 24px;
@@ -51,6 +63,18 @@
   }
   @media screen and (min-width: 1440px) {
     bottom: 186px;
+    &::before {
+      z-index: -1;
+      display: block;
+      content: '';
+      position: absolute;
+      left: -70px;
+      bottom: -195px;
+      width: 347px;
+      height: 588px;
+      background-image: url(/img/portfolio-page/bg-circle.png);
+      background-repeat: no-repeat;
+    }
   }
 }
 
