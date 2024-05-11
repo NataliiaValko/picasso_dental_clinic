@@ -18,6 +18,9 @@
   display: none;
   @media screen and (min-width: 1440px) {
     display: block;
+    width: 307px;
+    height: 390px;
+    background-color: #c1bfc0;
   }
 }
 .about-text-box {
@@ -66,22 +69,22 @@
 }
 .clinic-box {
   position: relative;
-}
-.clinic-box::before {
-  z-index: -1;
-  display: block;
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100vw;
-  height: 100px;
-  background-color: var(--color-accent);
-}
-@media screen and (min-width: 834px) {
-  .clinic-box::before {
-    display: none;
+  &::before {
+    z-index: -1;
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 100px;
+    background-color: var(--color-accent);
+  }
+  @media screen and (min-width: 834px) {
+    &::before {
+      display: none;
+    }
   }
 }
 .clinic-text-thumb {
@@ -147,37 +150,38 @@
 }
 .philosophy-box {
   position: relative;
-}
-.philosophy-box::before {
-  z-index: -1;
-  display: block;
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100vw;
-  height: 100px;
-  background-color: var(--color-accent);
-}
-@media screen and (min-width: 834px) {
-  .philosophy-box::before {
-    display: none;
+  &::before {
+    z-index: -1;
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 100px;
+    background-color: var(--color-accent);
   }
-}
-@media screen and (min-width: 1440px) {
-  .philosophy-box::before {
-    background-color: #c1bfc0;
+  @media screen and (min-width: 834px) {
+    &::before {
+      display: none;
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    &::before {
+      background-color: #c1bfc0;
+    }
   }
 }
 .philosophy-text-thumb {
   position: relative;
-}
-@media screen and (min-width: 834px) {
-  .philosophy-text-thumb::before {
-    content: '03';
+  @media screen and (min-width: 834px) {
+    &::before {
+      content: '03';
+    }
   }
 }
+
 /* STYLES FOR CONTACTS */
 .about-contacts {
   padding-top: 20px;
@@ -213,4 +217,29 @@
     flex-direction: row;
   }
 }
+
+.bg-picture {
+  display: block;
+  width: 100%;
+  height: 165px;
+  background-color: #c1bfc0;
+  @media screen and (min-width: 375px) {
+    width: 335px;
+    height: 197px;
+  }
+  @media screen and (min-width: 834px) {
+    width: 294px;
+    height: 390px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .bg-picture {
+    width: 307px;
+  }
+  .doctors-picture {
+    width: 638px;
+    height: 358px;
+  }
+}
+
 /* ------------------------ */
