@@ -59,7 +59,8 @@ callForm.addEventListener('submit', async function (e) {
 
   try {
     const res = await axios.post(
-      'http://localhost:3001/api/forms/call',
+      // 'http://localhost:3001/api/forms/call',
+      'https://picasso-dental-clinic-back.onrender.com/api/forms/call',
       formData
     );
 
