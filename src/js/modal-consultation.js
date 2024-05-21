@@ -113,6 +113,7 @@ consultationForm.addEventListener('submit', async function (e) {
     'consultation-form-file-prg-accent'
   );
   const fileClue = document.getElementById('consultation-form-file-clue');
+  const submitButton = document.getElementById('consultation-form-button');
 
   if (e.target.checkbox.checked === false) {
     const checkboxLabel = document.getElementById('checkbox-label');
@@ -130,6 +131,9 @@ consultationForm.addEventListener('submit', async function (e) {
   formData.append('file', e.target.file.files[0]);
 
   try {
+    submitButton.textContent = 'Відправка...';
+    submitButton.disabled = true;
+
     const res = await axios.post(
       // 'http://localhost:3001/api/forms/consultation',
       'https://picasso-dental-clinic-back.onrender.com/api/forms/consultation',
@@ -162,5 +166,8 @@ consultationForm.addEventListener('submit', async function (e) {
       filePrgAccent.textContent = '';
     }
     errorNotification();
+  } finally {
+    submitButton.textContent = 'Надіслати';
+    submitButton.disabled = false;
   }
 });

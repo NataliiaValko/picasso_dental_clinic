@@ -54,6 +54,7 @@ const appointmentForm = document.getElementById('appointment-form');
 
 appointmentForm.addEventListener('submit', async function (e) {
   e.preventDefault();
+  const submitButton = document.getElementById('appointment-form-button');
 
   const formData = {
     name: e.target.name.value,
@@ -63,6 +64,9 @@ appointmentForm.addEventListener('submit', async function (e) {
   };
 
   try {
+    submitButton.textContent = 'Відправка...';
+    submitButton.disabled = true;
+
     const res = await axios.post(
       // 'http://localhost:3001/api/forms/appointment',
       'https://picasso-dental-clinic-back.onrender.com/api/forms/appointment',
@@ -74,5 +78,8 @@ appointmentForm.addEventListener('submit', async function (e) {
     closeModal();
   } catch (error) {
     errorNotification();
+  } finally {
+    submitButton.textContent = 'Записатись';
+    submitButton.disabled = false;
   }
 });
