@@ -46,6 +46,11 @@ document.addEventListener('keydown', function (event) {
   }
 });
 
+//Генерація повідомлення для запису до клінікі
+export const generateMessCall = data => {
+  return `Передзвоніть мені, будь ласка! \n\nІ'мя: ${data.name} \nНомер телефону: ${data.phone}.`;
+};
+
 // Submit форми
 const callForm = document.getElementById('call-form');
 
@@ -54,28 +59,28 @@ callForm.addEventListener('submit', async function (e) {
   const submitButton = document.getElementById('call-form-button');
 
   const formData = {
-    name: e.target.name.value,
-    phone: e.target.phone.value,
+    name: e.target.elements.name.value,
+    phone: e.target.elements.phone.value,
   };
 
   try {
     submitButton.textContent = 'Відправка...';
     submitButton.disabled = true;
 
-    // Використання URLSearchParams для закодування даних
-    const params = new URLSearchParams();
-    params.append('text', generateMessAppointment(formData));
-
-    const res = await axios.post('callme.php', params, {
+    await fetch('callme.php', {
+      method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
       },
-    });
+      body: JSON.stringify({
+        text: generateMessCall(formData),
+      }),
+    }).then(successNotification);
 
-    successNotification();
     e.target.reset();
     closeModal();
   } catch (error) {
+    console.log(error.message);
     errorNotification();
   } finally {
     submitButton.textContent = 'Замовити';
