@@ -24,7 +24,8 @@
           type="text"
           name="name"
           placeholder="ПІБ*"
-          pattern="[а-яА-Яa-zA-Z\s]{1,50}"
+          minlength="2"
+          maxlength="50"
           required
           title="Введіть коректне значення (максимум 50 символів)"
         />
@@ -39,7 +40,11 @@
         />
       </div>
 
-      <button type="submit" class="button-main-dark call-form-button">
+      <button
+        type="submit"
+        class="button-main-dark call-form-button"
+        id="call-form-button"
+      >
         Замовити
       </button>
     </form>

@@ -31,7 +31,8 @@
           type="text"
           name="name"
           placeholder="ПІБ*"
-          pattern="[а-яА-Яa-zA-Z\s]{1,50}"
+          minlength="2"
+          maxlength="50"
           title="Введіть коректне значення (максимум 50 символів)"
           required
         />
@@ -135,7 +136,11 @@
         </span>
       </label>
 
-      <button type="submit" class="button-main-dark consultation-form-button">
+      <button
+        type="submit"
+        class="button-main-dark consultation-form-button"
+        id="consultation-form-button"
+      >
         Надіслати
       </button>
     </form>
