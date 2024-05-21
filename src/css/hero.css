@@ -93,9 +93,7 @@ overflow: hidden;
   }
 
   @media (min-width: 1440px) {
-    position: absolute;
-    top: 40px;
-    right: 70px;
+    display: none;
   }
 }
 
