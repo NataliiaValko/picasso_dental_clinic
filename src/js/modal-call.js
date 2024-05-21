@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { errorNotification, successNotification } from './toastify';
 
-// Функция для открытия модального окна
+// Функція для відкриття модального вікна
 export function openCallModal() {
   const callModal = document.getElementById('call-modal-backdrop');
   if (!callModal) {
@@ -12,7 +12,7 @@ export function openCallModal() {
   callModal.style.display = 'block';
 }
 
-// Закрытие модального окна
+// Закриття модального вікна
 function closeModal() {
   const callModal = document.getElementById('call-modal-backdrop');
   if (!callModal) {
@@ -23,14 +23,14 @@ function closeModal() {
   callModal.style.display = 'none';
 }
 
-// Обработчик клика на кнопку закрытия модального окна
+// Обробник кліка на кнопку закриття модального вікна
 document
   .getElementById('call-modal-close')
   .addEventListener('click', function () {
     closeModal();
   });
 
-// Закрытие модального окна при клике вне его области
+// Закриття модального вікна при кліку поза його областю
 document
   .getElementById('call-modal-backdrop')
   .addEventListener('click', function (event) {
@@ -39,12 +39,17 @@ document
     }
   });
 
-// Закрытие модального окна при нажатии клавиши Escape
+// Закриття модального вікна при натисканні клавіші Escape
 document.addEventListener('keydown', function (event) {
   if (event.key === 'Escape') {
     closeModal();
   }
 });
+
+//Генерація повідомлення для запису до клінікі
+export const generateMessCall = data => {
+  return `Передзвоніть мені, будь ласка! \n\nІ'мя: ${data.name} \nНомер телефону: ${data.phone}.`;
+};
 
 // Submit форми
 const callForm = document.getElementById('call-form');
@@ -54,24 +59,28 @@ callForm.addEventListener('submit', async function (e) {
   const submitButton = document.getElementById('call-form-button');
 
   const formData = {
-    name: e.target.name.value,
-    phone: e.target.phone.value,
+    name: e.target.elements.name.value,
+    phone: e.target.elements.phone.value,
   };
 
   try {
     submitButton.textContent = 'Відправка...';
     submitButton.disabled = true;
 
-    const res = await axios.post(
-      // 'http://localhost:3001/api/forms/call',
-      'https://picasso-dental-clinic-back.onrender.com/api/forms/call',
-      formData
-    );
+    await fetch('callme.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: JSON.stringify({
+        text: generateMessCall(formData),
+      }),
+    }).then(successNotification);
 
-    successNotification();
     e.target.reset();
     closeModal();
   } catch (error) {
+    console.log(error.message);
     errorNotification();
   } finally {
     submitButton.textContent = 'Замовити';
