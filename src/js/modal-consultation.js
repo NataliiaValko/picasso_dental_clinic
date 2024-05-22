@@ -135,7 +135,6 @@ consultationForm.addEventListener('submit', async function (e) {
     submitButton.disabled = true;
 
     const res = await axios.post(
-      // 'http://localhost:3001/api/forms/consultation',
       'https://picasso-dental-clinic-back.onrender.com/api/forms/consultation',
       formData,
       {

@@ -52,7 +52,7 @@ document.addEventListener('keydown', function (event) {
 
 const appointmentForm = document.getElementById('appointment-form');
 export const generateMessAppointment = data => {
-  return `Запис на прийом!\nІ'мя: ${data.name};\nНомер телефону: ${
+  return `Запис на прийом!\nІм'я: ${data.name};\nНомер телефону: ${
     data.phone
   };\nЕлектронна пошта: ${data.email ? data.email : ''}\nКоментар: ${
     data.comment ? data.comment : ''

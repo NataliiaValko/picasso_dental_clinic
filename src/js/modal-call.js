@@ -48,7 +48,7 @@ document.addEventListener('keydown', function (event) {
 
 //Генерація повідомлення для запису до клінікі
 export const generateMessCall = data => {
-  return `Передзвоніть мені, будь ласка! \n\nІ'мя: ${data.name} \nНомер телефону: ${data.phone}.`;
+  return `Передзвоніть мені, будь ласка! \n\nІм'я: ${data.name} \nНомер телефону: ${data.phone}.`;
 };
 
 // Submit форми
@@ -80,7 +80,6 @@ callForm.addEventListener('submit', async function (e) {
     e.target.reset();
     closeModal();
   } catch (error) {
-    console.log(error.message);
     errorNotification();
   } finally {
     submitButton.textContent = 'Замовити';
