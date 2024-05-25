@@ -60,7 +60,30 @@ export const generateMessAppointment = data => {
 };
 appointmentForm.addEventListener('submit', async function (e) {
   e.preventDefault();
+  clearErrors();
+
   const submitButton = document.getElementById('appointment-form-button');
+  const nameInput = document.getElementById('appointment-name-input');
+  const phoneInput = document.getElementById('appointment-phone-input');
+  const emailInput = document.getElementById('appointment-email-input');
+
+  const phonePattern = /^\+?[0-9\s\-\(\)]{10,18}$/;
+  const emailPattern = /[^\s@]+@[^\s@]+\.[^\s@]+/;
+
+  if (nameInput.value.trim().length < 2 || nameInput.value.trim().length > 50) {
+    showError(nameInput);
+    return;
+  }
+
+  if (!phonePattern.test(phoneInput.value.trim())) {
+    showError(phoneInput);
+    return;
+  }
+
+  if (!emailPattern.test(emailInput.value.trim())) {
+    showError(emailInput);
+    return;
+  }
 
   const formData = {
     name: e.target.elements.name.value,
@@ -92,3 +115,13 @@ appointmentForm.addEventListener('submit', async function (e) {
     submitButton.disabled = false;
   }
 });
+
+function showError(input) {
+  input.classList.add('input-error');
+}
+
+function clearErrors() {
+  document
+    .querySelectorAll('.input-error')
+    .forEach(el => el.classList.remove('input-error'));
+}
