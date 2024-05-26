@@ -187,6 +187,10 @@
   }
 }
 
+.input-error {
+  border-color: #ff0000;
+}
+
 .modal-consultation-modal-form-title-box {
   display: flex;
   flex-direction: column;

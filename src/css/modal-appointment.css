@@ -185,6 +185,10 @@
   }
 }
 
+.input-error {
+  border-color: #ff0000;
+}
+
 .appointment-form-button {
   width: 195px;
   height: 56px;

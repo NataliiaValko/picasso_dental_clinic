@@ -56,7 +56,23 @@ const callForm = document.getElementById('call-form');
 
 callForm.addEventListener('submit', async function (e) {
   e.preventDefault();
+  clearErrors();
+
   const submitButton = document.getElementById('call-form-button');
+  const nameInput = document.getElementById('call-name-input');
+  const phoneInput = document.getElementById('call-phone-input');
+
+  const phonePattern = /^\+?[0-9\s\-\(\)]{10,18}$/;
+
+  if (nameInput.value.trim().length < 2 || nameInput.value.trim().length > 50) {
+    showError(nameInput);
+    return;
+  }
+
+  if (!phonePattern.test(phoneInput.value.trim())) {
+    showError(phoneInput);
+    return;
+  }
 
   const formData = {
     name: e.target.elements.name.value,
@@ -86,3 +102,13 @@ callForm.addEventListener('submit', async function (e) {
     submitButton.disabled = false;
   }
 });
+
+function showError(input) {
+  input.classList.add('input-error');
+}
+
+function clearErrors() {
+  document
+    .querySelectorAll('.input-error')
+    .forEach(el => el.classList.remove('input-error'));
+}
